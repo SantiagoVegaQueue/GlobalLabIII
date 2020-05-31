@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hola mundo</p>
-    <p>Adios mundo UwU</p>
+
+    <a href="login.php">Iniciar sesión </a> &nbsp;
+    <a href="register.php">Registrarse </a> &nbsp;
+    <a href="logout.php">Cerrar sesión </a>
 </body>
 </html>
