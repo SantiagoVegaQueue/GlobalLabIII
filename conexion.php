@@ -1,14 +1,18 @@
 <?php
+	
+	//Acá definimos variables para la conexion de la base de datos
     $servidor = "localhost";
-    $username = "root";
-    $password = "";
+    $username_db = "root";
+    $password_db = "";
     $base_de_datos = "tienda";
 
+    
+    //Despues comprobamos la conexion en register php
     //Creando la conexion
 
-    $conn = mysqli_connect($servidor, $username,"") or die ("No se ha podido conectar al servidor de Base de datos");
+   /* $conn = mysqli_connect($servidor, $username,"") or die ("No se ha podido conectar al servidor de Base de datos");
 
-    $db = mysqli_select_db($conn, $base_de_datos) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos" );
+    $db = mysqli_select_db($conn, $base_de_datos) or die ( "Upps! Pues va a ser que no se ha podido conectar a la base de datos");
     
     $consulta = "SELECT * FROM usuarios";
 	$resultado = mysqli_query( $conn, $consulta ) or die ( "Algo ha ido mal en la consulta a la base de datos");
@@ -33,5 +37,5 @@
 	echo "</table>"; // Fin de la tabla
 
 	// cerrar conexión de base de datos
-	
+	*/
 ?>
