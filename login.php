@@ -7,10 +7,10 @@
 </head>
 <body>
     <h1>LOG IN</h1>
-    <form action="">
-        <input type="text" id="login" placeholder="Usuario"><br>
-        <br><input type="password" id="password" placeholder="Contraseña"><br>
-        <br><input type="submit" id="iniciar_sesion" value="Iniciar sesión">
+    <form action="verificar.php" method="POST">
+        <input type="text" id="login" name="username" placeholder="Usuario"><br>
+        <br><input type="password" id="password" name="password" placeholder="Contraseña"><br>
+        <br><input type="submit" id="iniciar_sesion" value="Iniciar sesión"><br>
     </form>
 </body>
 </html>
