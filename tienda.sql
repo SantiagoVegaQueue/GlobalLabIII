@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-06-2020 a las 01:42:04
+-- Tiempo de generación: 09-06-2020 a las 19:39:01
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.2.30
 
@@ -24,21 +24,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `rol`
+-- Estructura de tabla para la tabla `productos`
 --
 
-CREATE TABLE `rol` (
-  `id` int(2) NOT NULL,
-  `rol` varchar(50) NOT NULL
+CREATE TABLE `productos` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(60) NOT NULL,
+  `descripcion` longtext NOT NULL,
+  `precio` double NOT NULL,
+  `imagen` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `rol`
---
-
-INSERT INTO `rol` (`id`, `rol`) VALUES
-(1, 'admin'),
-(2, 'usuario');
 
 -- --------------------------------------------------------
 
@@ -47,62 +42,54 @@ INSERT INTO `rol` (`id`, `rol`) VALUES
 --
 
 CREATE TABLE `usuarios` (
-  `id` int(2) NOT NULL,
+  `id` int(10) NOT NULL,
+  `nombre` varchar(50) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(10) NOT NULL,
-  `rol_id` int(2) NOT NULL
+  `email` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `rol` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `username`, `password`, `rol_id`) VALUES
-(1, 'Santiago', 'Santiago', 1),
-(2, 'Martin', 'Martin', 2);
+INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `username`, `email`, `password`, `rol`) VALUES
+(4, 'Santiago', 'Vega', 'el_negromustaine13', 'santiagosaw24@gmail.com', '123', 'admin'),
+(5, 'Pepe', 'Valencia ', 'pepeluis', 'pepe@gmail.com', '456', 'usuario');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `rol`
+-- Indices de la tabla `productos`
 --
-ALTER TABLE `rol`
+ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `rol_id` (`rol_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT de la tabla `rol`
+-- AUTO_INCREMENT de la tabla `productos`
 --
-ALTER TABLE `rol`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `productos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `rol` (`id`);
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
