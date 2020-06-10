@@ -6,16 +6,13 @@
     <title>Index</title>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-	<center>
-		<h1>PAGINA DE INICIO</h1><br>
-    	<br><h2>Bienvenido</h2>
-    	<img src="https://i.ytimg.com/vi/PjX70rRtM-g/maxresdefault.jpg" alt="" style="width: 20%">
-	</center>
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
@@ -31,10 +28,10 @@
 			</a>
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" href="#">Sobre nosotros</a>
+			<a class="nav-link" href="sobreNosotros.php">Sobre nosotros</a>
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" href="#">Productos</a>
+			<a class="nav-link" href="productos.php">Productos</a>
 			</li>
 			<li class="nav-item">
 			<a class="nav-link" href="#">Contactos</a>
@@ -51,6 +48,13 @@
 	</nav>
 
 	<div class="container">
+		<br><h1 id="header1">Bienvenido a nuestra pagina!</h1>
+		<br>
+		<br>
+		<br>
+	</div>
+
+	<div class="container">
 
 	<div class="row">
 
@@ -58,50 +62,52 @@
 
 		<h1 class="my-4">Cortex Empresario</h1>
 		<div class="list-group">
-			<a href="#" class="list-group-item">Categoria 1</a>
-			<a href="#" class="list-group-item">Categoria 2</a>
-			<a href="#" class="list-group-item">Categoria 3</a>
-		</div>
+			<a href="#" class="list-group-item">Categorías</a>
+			<a href="#" class="list-group-item">Cajas de carton</a>
+			<a href="#" class="list-group-item">Cajas de metal</a>
+			<a href="#" class="list-group-item">Cajas de vidrio</a>
+		</div><br><br>
 
 		</div>
 
 		<div class="col-lg-9">	
 
-		<div id="carousel" class="carousel slide my-4" data-ride="carousel">
-			<ol class="carousel-indicators">
-			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-			</ol>
-			<div class="carousel-inner" role="listbox">
-			<div class="carousel-item active">
-				<img class="d-block img-fluid" src="https://img2.freepng.es/20180629/zlq/kisspng-crash-bandicoot-the-wrath-of-cortex-box-crash-bas-box-toys-5b35bfe48f7798.5926881815302491885877.jpg" alt="First slide">
-			</div>
-			<div class="carousel-item">
-				<img class="d-block img-fluid" src="https://static.xtralife.com/conversions/4MCP-M1P8238645-medium_w640_h480_q75-me-crbltnt-61664-5055964726140-lampara-3d-crash-bandicoot-tnt-10-cm-con-sonido-1564743201.png" alt="Second slide">
-			</div>
-			<div class="carousel-item">
-				<img class="d-block img-fluid" src="https://pm1.narvii.com/7089/36c3a8510c501c963cfb47424e90cc0233771921r1-400-400v2_00.jpg" alt="Third slide">
-			</div>
-			</div>
-			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-			</a>
-		</div>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  		<ol class="carousel-indicators">
+    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+   	 	<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+ 	 </ol>
+ 	 <div class="carousel-inner">
+   		<div class="carousel-item active">
+    		<img id="imagen1" class="d-block w-100" src="https://orangebox.com.ar/wp-content/uploads/2015/02/Orange-Box-1.jpg"  alt="First slide">
+    	</div>
+    	<div class="carousel-item">
+      		<img id="imagen2" class="d-block w-100" src="https://orangebox.com.ar/wp-content/uploads/2015/02/Orange-Box-2.jpg" alt="Second slide">
+    	</div>
+    	<div class="carousel-item">
+      		<img id="imagen3" class="d-block w-100" src="https://st.depositphotos.com/1000975/2963/i/950/depositphotos_29635763-stock-photo-woman-with-box-on-white.jpg" alt="Third slide">
+    	</div>
+  		</div>
+  		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  		</a>
+  		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  		</a>
+	</div>
+
+		<br><br><br><h2 class="my-4" align="center">Lo mas vendido</h2>
 
 		<div class="row">
-
 			<div class="col-lg-4 col-md-6 mb-4">
 			<div class="card h-100">
 				<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/41NzQ-f-0dL._AC_SY400_.jpg" alt=""></a>
 				<div class="card-body">
 				<h4 class="card-title">
-					<a href="#">Item One</a>
+					<a href="#">Caja naranja</a>
 				</h4>
 				<h5>$24.99</h5>
 				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -117,7 +123,7 @@
 				<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/810oMCXKSSL._AC_SX355_.jpg" alt=""></a>
 				<div class="card-body">
 				<h4 class="card-title">
-					<a href="#">Item Two</a>
+					<a href="#">Caja gris</a>
 				</h4>
 				<h5>$24.99</h5>
 				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
@@ -133,7 +139,7 @@
 				<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81YOmcf8RVL._AC_SX355_.jpg" alt=""></a>
 				<div class="card-body">
 				<h4 class="card-title">
-					<a href="#">Item Three</a>
+					<a href="#">Caja marron</a>
 				</h4>
 				<h5>$24.99</h5>
 				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
@@ -149,9 +155,9 @@
 				<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/1/14/C-vRQ5BUQAAJ79K.jpg/revision/latest/top-crop/width/300/height/300?cb=20170717122834" alt=""></a>
 				<div class="card-body">
 				<h4 class="card-title">
-					<a href="#">Item Four</a>
+					<a href="#">Caja edicion especial</a>
 				</h4>
-				<h5>$24.99</h5>
+				<h5>$2499.99</h5>
 				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
 				</div>
 				<div class="card-footer">
@@ -165,7 +171,7 @@
 				<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/7/7c/THEBOX.jpg/revision/latest?cb=20050831142709" alt=""></a>
 				<div class="card-body">
 				<h4 class="card-title">
-					<a href="#">Item Five</a>
+					<a href="#">!</a>
 				</h4>
 				<h5>$24.99</h5>
 				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
@@ -181,7 +187,7 @@
 				<a href="#"><img class="card-img-top" src="https://cdn3.dualshockers.com/wp-content/uploads/2015/08/MGS5Boss-8.jpg" alt=""></a>
 				<div class="card-body">
 				<h4 class="card-title">
-					<a href="#">Item Six</a>
+					<a href="#">Caja rosada</a>
 				</h4>
 				<h5>$24.99</h5>
 				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>

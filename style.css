@@ -1,0 +1,14 @@
+#login{
+    border-top : 50;
+    text-align : center;
+}
+
+#header1{
+    padding-top : 90px;
+    text-align : center;
+}
+
+#imagen1,#imagen2,#imagen3{
+    width : 1000px;
+    height : 350px;
+}

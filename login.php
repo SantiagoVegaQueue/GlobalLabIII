@@ -6,8 +6,9 @@
     <title>LOGIN</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body id="login">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Cortex empresario</a>
@@ -40,12 +41,14 @@
             </div>
         </div>
     </nav>
-    <h1>LOG IN</h1>
-    <form action="verificar.php" method="POST">
+    <div id="login">
+        <h1 id="header1">LOG IN</h1>
+        <form action="verificar.php" method="POST">
         <input type="text" id="login" name="username" placeholder="Usuario"><br>
         <br><input type="password" id="password" name="password" placeholder="Contraseña"><br>
         <br><input type="submit" id="iniciar_sesion" value="Iniciar sesión">
-        <button><a href="crear_cuenta.html">Registrarse</a></button>
-    </form>
+        <button><a href="crear_cuenta.php">Registrarse</a></button>
+        </form>
+    </div>
 </body>
 </html>
