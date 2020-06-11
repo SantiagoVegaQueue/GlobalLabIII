@@ -1,37 +1,34 @@
 <?php 
+    session_start();
     require 'conexion.php';
 
-    $sql = "SELECT * FROM usuarios WHERE username ='". $_POST['username']."' ";
+    $sql = "SELECT username,password,rol FROM usuarios";
     $result = mysqli_query($conn,$sql);
 
-    while($colum = mysqli_fetch_array($result)){
-        $user_verified = $colum['username'];
-        $pass_verified = $colum['password'];
-        $rol_verified = $colum['rol'];
-    }
-    mysqli_close($conn);
-
-    if($_POST['username'] == $user_verified && $_POST['password'] == $pass_verified && $rol_verified =="admin"){
-        header("location: panel_admin.php");
-    }else if($_POST['username'] == $user_verified && $_POST['password'] == $pass_verified && $rol_verified =="usuario"){
-        header("location: index.php");
-    }else{
-        echo "Usuario y/o contraseña incorrectos";
-        die();
-    }
-    /*if(mysqli_num_rows($result)>0){
-        while($row = mysqli_fetch_assoc($result)){
-            $usuario = $row['username'];
-            $contraseña = $row['password'];
-            $rol = $row['rol'];
-
-            session_start();
-            $_SESSION['usuario'] = $usuario;
-            $_SESSION['contraseña'] = $contraseña;
-            $_SESSION['rol'] = $rol;
+    if (mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_array($result)) {
+            if(isset($_SESSION["usernormal"])){
+                header("location: index.php");
+            }
+            if(isset($_POST["enviar"])){
+                $user = $_POST["username"];
+                $pass = $_POST["password"];
+                
+                if($user == $row["username"] && $pass == $row["password"] && $row["rol"] == "admin"){
+                    $_SESSION["useradmin"] = $row["rol"];
+                    header("location: panel_admin.php");
+                }elseif($user == $row["username"] && $pass == $row["password"] && $row["rol"] == "usuario"){
+                    $_SESSION["usernormal"] = $row["rol"];
+                    header("location: index.php");
+                }
+            }
+            //echo "username: " . $row["username"]. " - password: " . $row["password"]. " " . $row["rol"]. "<br>";
         }
-        header("location: panel_admin.php");
+        
+    } else {
+        echo "0 results";
     }
-    session_start();¨*/
+    
+    mysqli_close($conn);
 
  ?>

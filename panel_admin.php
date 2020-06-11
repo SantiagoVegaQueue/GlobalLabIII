@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,12 @@
     <title>PANEL ADMIN</title>
 </head>
 <body>
+<?php
+    if(!isset($_SESSION["useradmin"])){
+        echo "no tiene permiso";
+        die();
+    }
+?>
 <center>
     <h1>PANEL ADMIN</h1>
         <form action="">

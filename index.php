@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +15,19 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+	<?php
+		if(!isset($_SESSION["usernormal"])){
+			echo "haga login";
+			header("location: login.php");
+		}
+	?>
+<<<<<<< HEAD
 	<center>
 		<h1>PAGINA DE INICIO</h1><br>
     	<br><h2>Bienvenido</h2>
     	<img src="https://i.ytimg.com/vi/PjX70rRtM-g/maxresdefault.jpg" alt="" style="width: 20%">
 	</center>
+<<<<<<< Updated upstream
 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
@@ -201,5 +213,13 @@
 	</div>
 	</footer>
 
+=======
+=======
+
+    <a href="login.php">Iniciar sesión </a> &nbsp;
+    <a href="register.php">Registrarse </a> &nbsp;
+    <a href="logout.php">Cerrar sesión </a>
+>>>>>>> code
+>>>>>>> Stashed changes
 </body>
 </html>

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +48,7 @@
     <form action="verificar.php" method="POST">
         <input type="text" id="login" name="username" placeholder="Usuario"><br>
         <br><input type="password" id="password" name="password" placeholder="Contraseña"><br>
-        <br><input type="submit" id="iniciar_sesion" value="Iniciar sesión">
+        <br><input type="submit" id="iniciar_sesion" name="enviar" value="Iniciar sesión">
         <button><a href="crear_cuenta.html">Registrarse</a></button>
     </form>
 </body>
