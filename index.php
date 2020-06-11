@@ -13,7 +13,7 @@
 </head>
 
 <body>
-
+	<div style="margin-top: 6rem; max-width: 40rem;">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
 		<a class="navbar-brand" href="#">Cortex empresario</a>
@@ -34,7 +34,7 @@
 			<a class="nav-link" href="productos.php">Productos</a>
 			</li>
 			<li class="nav-item">
-			<a class="nav-link" href="#">Contactos</a>
+			<a class="nav-link" href="#">Contacto</a>
 			</li>
 			<li class="nav-item">
 			<a class="nav-link" href="login.php">Ingresar</a>
@@ -46,6 +46,7 @@
 		</div>
 	</div>
 	</nav>
+	</div>
 
 	<div class="container">
 		<br><h1 id="header1">Bienvenido a nuestra pagina!</h1>
