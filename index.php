@@ -15,22 +15,13 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<<<<<<< HEAD
 <body>
+
 	<?php
 		if(!isset($_SESSION["usernormal"])){
 			echo "haga login";
 		}
 	?>
-<<<<<<< HEAD
-	<center>
-		<h1>PAGINA DE INICIO</h1><br>
-    	<br><h2>Bienvenido</h2>
-    	<img src="https://i.ytimg.com/vi/PjX70rRtM-g/maxresdefault.jpg" alt="" style="width: 20%">
-	</center>
-<<<<<<< Updated upstream
-=======
->>>>>>> code
 
 <body>
 	<div style="margin-top: 6rem; max-width: 40rem;">
@@ -224,17 +215,9 @@
 	</div>
 	<footer class="py-5 bg-dark">
 	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
 	</footer>
 
-=======
-=======
-
-    <a href="login.php">Iniciar sesión </a> &nbsp;
-    <a href="register.php">Registrarse </a> &nbsp;
-    <a href="logout.php">Cerrar sesión </a>
->>>>>>> code
->>>>>>> Stashed changes
 </body>
 </html>
