@@ -23,11 +23,11 @@
 		}
 	?>
 
-<body>
-	<div style="margin-top: 6rem; max-width: 40rem;">
+	<div class="bg">
+	<div style="margin-top: 2rem; max-width: 40rem;">
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 	<div class="container">
-		<a class="navbar-brand" href="#">Cortex empresario</a>
+		<a class="navbar-brand" href="index.php">Cortex empresario</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 		</button>
@@ -219,5 +219,7 @@
 	</div>
 	</footer>
 
+	</div>
+	
 </body>
 </html>

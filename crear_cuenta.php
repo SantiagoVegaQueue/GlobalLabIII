@@ -6,10 +6,19 @@
     
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <style>
+        .border{
+            width: 350px;
+            height: 700px;
+        }
+    </style>
 </head>
 
 <body>
-    <div style="margin-top: 6rem; max-width: 40rem;">
+
+    <div class="bg">
+    <div style="margin-top: 3.5rem; max-width: 40rem;">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Cortex empresario</a>
@@ -44,7 +53,7 @@
     </nav>
     </div>
 
-	<div class="container mx-auto" style="width: 200px;">
+	<div class="container mx-auto border">
     	<h1>Registrarse</h1>
         <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;">
             <label for="">Nombre</label>
@@ -62,9 +71,10 @@
             <option value="usuario">Usuario</option>
             <option value="admin">Administrador</option>
             </select><br>
-            <button type="button" class="btn btn-dark" value="Enviar datos"></button>
+            <br><a href="index.php"><input type=submit value="Enviar">
         </form>
     </div>
 
+</div>
 </body>
 </html>

@@ -16,7 +16,9 @@
 </head>
 
 <body>
-    <div style="margin-top: 6rem; max-width: 40rem;">
+    <div class="bg">
+
+    <div style="margin-top: 3.5rem; max-width: 40rem;">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="index.php">Cortex empresario</a>
@@ -52,9 +54,9 @@
         </nav>
     </div>
 
-    <div class="container mx-auto" style="width: 200px;">
+    <div class="container mx-auto border">
         <div>
-            <h1>Ingresar</h1>
+            <h1>Ingresar</h1><br>
             <form action="verificar.php" method="POST">
                 <input type="text" id="login" name="username" placeholder="Usuario"><br>
                 <br><input type="password" id="password" name="password" placeholder="Contraseña"><br>
@@ -63,7 +65,8 @@
             </form>   
         </div>
     </div>
-    
+
+    </div>
 </body>
 
 </html>
