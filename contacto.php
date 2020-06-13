@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sobreNosotros</title>
-
-	<!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
     
-	<!-- Funcionalidad NAV -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <!-- Funcionalidad NAV -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-	<!-- Hoja de estilo CSS -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Hoja de estilo CSS -->
+	<link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome (para los iconos) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
-	<div class="bg">
+    <div class="bg">
 
-		<!-- Nav -->
+        <!-- Nav -->
 		<div class="container" style="margin-top: 3.5rem; max-width: 40rem;">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 				<div class="container">
@@ -55,20 +58,23 @@
 			</nav>
 		</div>
 
-		<div class="container mx-auto">
-			<h1>Vendemos cajas</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-			 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-			 <p>Nunc non dictum elit. Phasellus sit amet malesuada nisi. Pellentesque aliquet mattis iaculis. Nunc quam diam, pellentesque eu hendrerit nec,
-			 sollicitudin ac lorem. Vivamus felis sem, eleifend vitae leo ut, laoreet condimentum sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-			 Aenean sed pretium urna, et finibus sem. Nunc eu tellus ante. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-			 cubilia curae; In vitae sagittis leo. Praesent volutpat sagittis accumsan. Etiam at mi iaculis, pulvinar eros in, ullamcorper ante. Integer leo enim, finibus
-			 ac maximus id, commodo eget lacus. Suspendisse scelerisque ut lectus ut fringilla. Phasellus dignissim pretium dolor, sed lobortis arcu pellentesque sed.</p>
-		</div>
+        <!-- Iconos -->
+        <div class="container">
+            <i class="fa fa-phone fa-2x" aria-hidden="true">123 456-7890</i>
+            <br><br>
+            <i class="fa fa-envelope fa-2x" aria-hidden="true">cortexempresario@yahoo.com</i>
+            <br><br>
+            <i class="fa fa-facebook-official fa-2x" aria-hidden="true">CortexEmpresario</i>
+            <br><br>
+            <i class="fa fa-instagram fa-2x" aria-hidden="true">CortexEmpresarioAR</i>
+            <br><br>
+            <i class="fa fa-twitter fa-2x" aria-hidden="true">CortexEmpresario</i>
+            <br><br>
+            
+        </div>
 	</div>
 
-	<footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark">
 	<div class="container">
 		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
