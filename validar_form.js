@@ -40,39 +40,47 @@ var expReg=  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
     return false;
 
 }*/
-
+//--------VALIDACION DEL LADO DEL CLIENTE REGISTRO----------------------
     var form = document.getElementById("formReg");
     
     form.addEventListener('submit', function(evt){
-        evt.preventDefault();
+        
 
         if(nombre.value === "" || nombre.value === null){
             nombre.style.borderColor = "#FFBABA";
+            evt.preventDefault();
         }else{
             nombre.style.borderColor = "#DCFFD9";
         }
     
         if(apellido.value === "" || apellido.value === null){
             apellido.style.borderColor = "#FFBABA";
+            evt.preventDefault();
         }else{
             apellido.style.borderColor = "#DCFFD9";
         }
     
         if(usuario.value === "" || usuario.value === null){
             usuario.style.borderColor = "#FFBABA";
+            evt.preventDefault();
         }else{
             usuario.style.borderColor = "#DCFFD9";
         }
     
         if(email.value === "" || email.value === null || !expReg.test(email.value)){
-            email.style.borderColor = "#FFBABA";      
+            email.style.borderColor = "#FFBABA";    
+            evt.preventDefault();  
         }else{
             email.style.borderColor = "#DCFFD9";
         }
         if(password.value === "" || password.value === null){
             password.style.borderColor = "#FFBABA";
+            evt.preventDefault();
         }else{
             password.style.borderColor = "#DCFFD9";
         }
         
     });
+
+//--------VALIDACION DEL LADO DEL CLIENTE LOGIN----------------------
+

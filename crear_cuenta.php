@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +27,11 @@
 </head>
 
 <body>
-
+    <?php
+        if(isset($_SESSION["useradmin"]) || isset($_SESSION["usernormal"])){
+            header("location: index.php");
+        }
+    ?>
     <div class="bg">
     
         <!-- Nav -->
@@ -65,7 +72,7 @@
 
 	<div class="container mx-auto border">
     	<h1>Registrarse</h1>
-        <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="form"">
+        <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="formReg">
             
             <label for="">Nombre</label>
             <input type="text" name="nombre" id="nombre" ><br>
@@ -93,6 +100,7 @@
     </div>
 
 </div>
+<script src="validar_form.js"></script>
 </body>
 
 </html>

@@ -8,15 +8,24 @@
     $pass = $_POST['password'];
     $rol = $_POST['rol'];
 
-    //Se agregan las variables a la base de datos
-    $sql = "INSERT INTO usuarios (nombre,apellido,username,email,password,rol) VALUES ('$nombre','$apellido','$username','$email','$pass','$rol')";
-    //Mediante los procediminetos mysqli, verificamos que la inserccion sea exitosa
-    if(mysqli_query($conn,$sql)){
-        header('location:login.php');
+    $sqlFirst = "SELECT username FROM usuarios WHERE username = '$username'";
+    $resultFirst = mysqli_query($conn,$sqlFirst);
+
+    if(mysqli_num_rows($resultFirst)>0){
+        header("location: crear_cuenta.php");
     }else{
-        echo "Error".$sql."<br>".mysqli_error($conn);
+        $sql = "INSERT INTO usuarios (nombre,apellido,username,email,password,rol) VALUES ('$nombre','$apellido','$username','$email','$pass','$rol')";
+        //Mediante los procediminetos mysqli, verificamos que la inserccion sea exitosa
+        if(mysqli_query($conn,$sql)){
+            header('location:login.php');
+        }else{
+            echo "Error".$sql."<br>".mysqli_error($conn);
+        }
+        mysqli_close($conn);
     }
-    mysqli_close($conn);
+
+    //Se agregan las variables a la base de datos
+    
 ?>
 
 <!DOCTYPE html>

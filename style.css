@@ -46,3 +46,11 @@ body, html{
 .error {
     background: red;
 }
+#sidebar-container{
+    min-height: 100vh;
+    background-color: darkslateblue;
+}
+
+#sidebar-container.logo{
+    
+}

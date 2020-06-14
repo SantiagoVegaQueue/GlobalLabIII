@@ -23,6 +23,12 @@
 </head>
 
 <body>
+
+    <?php
+        if(isset($_SESSION["useradmin"]) || isset($_SESSION["usernormal"])){
+            header("location: index.php");
+        }
+    ?>
     <div class="bg">
 
     <!-- Nav -->
@@ -65,9 +71,9 @@
     <div class="container mx-auto border">
         <div>
             <h1>Ingresar</h1><br>
-            <form action="verificar.php" method="POST">
-                <input type="text" id="login" name="username" placeholder="Usuario"><br>
-                <br><input type="password" id="password" name="password" placeholder="Contraseña"><br>
+            <form action="verificar.php" method="POST" id="formLog">
+                <input type="text" id="user_log" name="username" placeholder="Usuario"><br>
+                <br><input type="password" id="password_log" name="password" placeholder="Contraseña"><br>
                 <br><input type="submit" id="iniciar_sesion" name="enviar" value="Iniciar sesión">
                 <a href="crear_cuenta.php"><input type=button value="Registrarse">
             </form>   
@@ -80,6 +86,7 @@
 	<div class="container">
 		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
-	</footer>
+    </footer>
+    <script src="validar_form_Login.js"></script>
 </body>
 </html>
