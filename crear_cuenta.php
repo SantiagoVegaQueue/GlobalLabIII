@@ -65,31 +65,35 @@
 
 	<div class="container mx-auto border">
     	<h1>Registrarse</h1>
-        <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;">
+        <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="form" onsubmit="return validar();">
+            
             <label for="">Nombre</label>
-            <input type="text" name="nombre" required><br>
+            <input type="text" name="nombre" id="nombre" ><br>
+            
             <br><label for="">Apellido</label>
-            <input type="text" name="apellido" required><br>
+            <input type="text" name="apellido" id="apellido" ><br>
+            
             <br><label for="">Usuario</label>
-            <input type="text" id="nombre_usuario" name="username" required><br>
+            <input type="text" name="username" id="nombre_usuario" ><br>
+            
             <br><label for="">Email</label>
-            <input type="email" name="email" required><br>
+            <input type="email" name="email" id="email" ><br>
+            
             <br><label for="">Contraseña</label>
-            <input type="password" id="password" name="password" required><br>
+            <input type="password" name="password" id="password" ><br>
+            
             <br><label for="">Rol</label>
             <select name="rol" id="rol">
-            <option value="usuario">Usuario</option>
-            <option value="admin">Administrador</option>
+                <option value="usuario">Usuario</option>
+                <option value="admin">Administrador</option>
             </select><br>
-            <br><a href="index.php"><input type=submit value="Enviar">
+            
+            <br><a href="index.php"><input type="submit" value="Enviar">
         </form>
     </div>
 </div>
 
-    <footer class="py-5 bg-dark">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
-	</div>
-	</footer>
+</div>
 </body>
+
 </html>

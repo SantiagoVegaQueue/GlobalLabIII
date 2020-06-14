@@ -227,6 +227,8 @@
 	</footer>
 
 	</div>
-	
+	<div>
+		<a href="logout.php">CERRAR SESION</a>
+	</div>
 </body>
 </html>
