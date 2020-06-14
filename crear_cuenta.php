@@ -65,7 +65,7 @@
 
 	<div class="container mx-auto border">
     	<h1>Registrarse</h1>
-        <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="form" onsubmit="return validar();">
+        <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="form"">
             
             <label for="">Nombre</label>
             <input type="text" name="nombre" id="nombre" ><br>
