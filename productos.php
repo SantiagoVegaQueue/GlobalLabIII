@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,9 +59,37 @@
 			</nav>
 		</div>
 		<div class="container">
-			<?php
+			<div id="app" class="row">
+				<div class="col-md-4 pt-5">
+					<div class="card">
+						<div class="card-header">
+							<h4>Añada un producto</h4>
+						</div>
 
-			?>
+						<form id="productoFormulario" class="card-body">
+							<div class="form-group">
+								<input type="text" id="name" placeholder="Nombre del producto" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<input type="number" id="price" step="0.01" placeholder="Precio del producto" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<input type="number" id="year" placeholder="Año del producto" class="form-control">
+							</div>
+
+							<input type="submit" value="Enviar" class="btn btn-primary btn-block">
+						</form>
+					</div>
+				</div>
+
+				<div class="col-md-8">
+					<div id="lista-productos">
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -66,5 +98,7 @@
 		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
 	</footer>
+
+	<script src="app.js"></script>
 </body>
 </html>

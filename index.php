@@ -27,7 +27,7 @@
 			echo "haga login";
 		}
 	?>
-
+	
 	<div class="bg">
 
 	<!-- Nav -->
