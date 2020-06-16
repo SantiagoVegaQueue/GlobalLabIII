@@ -47,17 +47,132 @@
 					<li class="nav-item">
 					<a class="nav-link" href="contacto.php">Contacto</a>
 					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="login.php">Ingresar</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="crear_cuenta.php">Registrarse</a>
-					</li>
+					<?php
+				
+						if(isset($_SESSION["usernormal"]) || isset($_SESSION["useradmin"])){
+							echo '
+							<li class="nav-item">
+							<a class="nav-link" href="logout.php">Salir</a>
+							</li>
+							';
+						}else{
+							
+							echo '<li class="nav-item">
+							<a class="nav-link" href="login.php">Ingresar</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" href="crear_cuenta.php">Registrarse</a>
+							</li>';
+						}
+					?>
 					</ul>
 					</div>
 				</div>
 			</nav>
 		</div>
+
+		<div class="container">
+		<br><br><br><h2 class="my-4" align="center">Lo mas vendido</h2>
+
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/41NzQ-f-0dL._AC_SY400_.jpg" alt=""></a>
+					<div class="card-body">
+					<h4 class="card-title">
+						<a href="#">Caja naranja</a>
+					</h4>
+					<h5>$24.99</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+					</div>
+					<div class="card-footer">
+					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/810oMCXKSSL._AC_SX355_.jpg" alt=""></a>
+					<div class="card-body">
+					<h4 class="card-title">
+						<a href="#">Caja gris</a>
+					</h4>
+					<h5>$24.99</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+					</div>
+					<div class="card-footer">
+					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81YOmcf8RVL._AC_SX355_.jpg" alt=""></a>
+					<div class="card-body">
+					<h4 class="card-title">
+						<a href="#">Caja marron</a>
+					</h4>
+					<h5>$24.99</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+					</div>
+					<div class="card-footer">
+					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/1/14/C-vRQ5BUQAAJ79K.jpg/revision/latest/top-crop/width/300/height/300?cb=20170717122834" alt=""></a>
+					<div class="card-body">
+					<h4 class="card-title">
+						<a href="#">Caja edicion especial</a>
+					</h4>
+					<h5>$2499.99</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+					</div>
+					<div class="card-footer">
+					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/7/7c/THEBOX.jpg/revision/latest?cb=20050831142709" alt=""></a>
+					<div class="card-body">
+					<h4 class="card-title">
+						<a href="#">!</a>
+					</h4>
+					<h5>$24.99</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+					</div>
+					<div class="card-footer">
+					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+					</div>
+				</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+				<div class="card h-100">
+					<a href="#"><img class="card-img-top" src="https://cdn3.dualshockers.com/wp-content/uploads/2015/08/MGS5Boss-8.jpg" alt=""></a>
+					<div class="card-body">
+					<h4 class="card-title">
+						<a href="#">Caja rosada</a>
+					</h4>
+					<h5>$24.99</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+					</div>
+					<div class="card-footer">
+					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="container">
 			<div id="app" class="row">
 				<div class="col-md-4 pt-5">

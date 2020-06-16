@@ -40,68 +40,112 @@
     
         <!-- Nav -->
         <div style="margin-top: 3.5rem; max-width: 40rem;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Cortex empresario</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Inicio
-                            <span class="sr-only">(actual)</span>
-                        </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobreNosotros.php">Sobre nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="productos.php">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.php">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">Ingresar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="crear_cuenta.php">Registrarse</a>
-                        </li>
-                    </ul>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Cortex empresario</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                            <a class="nav-link" href="index.php">Inicio
+                                <span class="sr-only">(actual)</span>
+                            </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobreNosotros.php">Sobre nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="productos.php">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.php">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.php">Ingresar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="crear_cuenta.php">Registrarse</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
         </div>
 
-	<div class="container mx-auto border">
-    	<h1>Registrarse</h1>
-        <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="formReg">
-            
-            <label for="">Nombre</label>
-            <input type="text" name="nombre" id="nombre" ><br>
-            
-            <br><label for="">Apellido</label>
-            <input type="text" name="apellido" id="apellido" ><br>
-            
-            <br><label for="">Usuario</label>
-            <input type="text" name="username" id="nombre_usuario" ><br>
-            
-            <br><label for="">Email</label>
-            <input type="email" name="email" id="email" ><br>
-            
-            <br><label for="">Contraseña</label>
-            <input type="password" name="password" id="password" ><br>
-            
-            <br><label for="">Rol</label>
-            <select name="rol" id="rol">
-                <option value="usuario">Usuario</option>
-                <option value="admin">Administrador</option>
-            </select><br>
-            
-            <br><a href="index.php"><input type="submit" value="Enviar">
-        </form>
-    </div>
+        <div class="container">
+			<div id="app" class="row">
+				<div class="col-md-5 pt-5 mx-auto">
+					<div class="card">
+						<div class="card-header">
+							<h4>Crear cuenta</h4>
+						</div>
+
+						<form action="register.php" method="POST" id="registerForm" class="card-body">
+							<div class="form-group">
+								<input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control">
+							</div>
+
+							<div class="form-group">
+								<input type="text" name="username" id="nombre_usuario" placeholder="Usuario" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+								<input type="email" name="email" id="email" placeholder="E-Mail" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+								<input type="password" name="password" id="password" placeholder="Contraseña" class="form-control">
+                            </div>
+                            
+                            <br><label for="">Rol</label>
+                            <select name="rol" id="rol">
+                                <option value="usuario">Usuario</option>
+                                <option value="admin">Administrador</option>
+                            </select><br>
+
+							<input type="submit" value="Enviar" class="btn btn-primary btn-block">
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+        
+        <!--
+	    <div class="container mx-auto border">
+            <h1>Registrarse</h1>
+            <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="formReg">
+                
+                <label for="">Nombre</label>
+                <input type="text" name="nombre" id="nombre" ><br>
+                
+                <br><label for="">Apellido</label>
+                <input type="text" name="apellido" id="apellido" ><br>
+                
+                <br><label for="">Usuario</label>
+                <input type="text" name="username" id="nombre_usuario" ><br>
+                
+                <br><label for="">Email</label>
+                <input type="email" name="email" id="email" ><br>
+                
+                <br><label for="">Contraseña</label>
+                <input type="password" name="password" id="password" ><br>
+                
+                <br><label for="">Rol</label>
+                <select name="rol" id="rol">
+                    <option value="usuario">Usuario</option>
+                    <option value="admin">Administrador</option>
+                </select><br>
+                
+                <br><a href="index.php"><input type="submit" value="Enviar">
+            </form>
+        </div>
+        -->
 
 </div>
 <script src="validar_form.js"></script>

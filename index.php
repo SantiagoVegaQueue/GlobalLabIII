@@ -19,13 +19,17 @@
 	
 	<!-- Hoja de estilo CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
 	<?php
 		if(!isset($_SESSION["usernormal"])){
-			echo "haga login";
+			echo "Haga login";
 		} 
+
 		/*if (isset($_SESSION["useradmin"])){
 			echo '<div class="row">
 						<div class="d-flex">
@@ -70,181 +74,45 @@
 			<li class="nav-item">
 			<a class="nav-link" href="contacto.php">Contacto</a>
 			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="login.php">Ingresar</a>
-			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="crear_cuenta.php">Registrarse</a>
-			</li>
+
+			<?php
+				
+				if(isset($_SESSION["usernormal"]) || isset($_SESSION["useradmin"])){
+					echo '
+					<li class="nav-item">
+					 <a class="nav-link" href="logout.php">Salir</a>
+					 </li>
+					';
+				}else{
+					
+					echo '<li class="nav-item">
+					 <a class="nav-link" href="login.php">Ingresar</a>
+					 </li>
+					 <li class="nav-item">
+					 <a class="nav-link" href="crear_cuenta.php">Registrarse</a>
+					 </li>';
+				}
+			?>
+
 		</ul>
 		</div>
-	</div>
-	</nav>
-	</div>
-
-	<div class="container">
-		<br><h1 id="header1">Bienvenido a nuestra pagina!</h1>
-		<br>
-		<br>
-		<br>
-	</div>
-
-	<div class="container">
-
-	<div class="row">
-
-		<div class="col-lg-3">
-
-		<h1 class="my-4">Cortex Empresario</h1>
-		<div class="list-group">
-			<a class="list-group-item">Categorías</a>
-			<a href="#" class="list-group-item">Cajas de carton</a>
-			<a href="#" class="list-group-item">Cajas de metal</a>
-			<a href="#" class="list-group-item">Cajas de vidrio</a>
-		</div><br><br>
-
+		</div>
+		</nav>
 		</div>
 
-		<div class="col-lg-9">	
-
-		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  		<ol class="carousel-indicators">
-    	<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    	<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-   	 	<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
- 	 </ol>
- 	 <div class="carousel-inner">
-   		<div class="carousel-item active">
-    		<img id="imagen1" class="d-block w-100" src="https://orangebox.com.ar/wp-content/uploads/2015/02/Orange-Box-1.jpg"  alt="First slide">
-    	</div>
-    	<div class="carousel-item">
-      		<img id="imagen2" class="d-block w-100" src="https://orangebox.com.ar/wp-content/uploads/2015/02/Orange-Box-2.jpg" alt="Second slide">
-    	</div>
-    	<div class="carousel-item">
-      		<img id="imagen3" class="d-block w-100" src="https://st.depositphotos.com/1000975/2963/i/950/depositphotos_29635763-stock-photo-woman-with-box-on-white.jpg" alt="Third slide">
-    	</div>
-  		</div>
-  		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    	<span class="sr-only">Previous</span>
-  		</a>
-  		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
-    	<span class="sr-only">Next</span>
-  		</a>
-	</div>
-
-		<br><br><br><h2 class="my-4" align="center">Lo mas vendido</h2>
-
-		<div class="row">
-			<div class="col-lg-4 col-md-6 mb-4">
-			<div class="card h-100">
-				<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/41NzQ-f-0dL._AC_SY400_.jpg" alt=""></a>
-				<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">Caja naranja</a>
-				</h4>
-				<h5>$24.99</h5>
-				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-				</div>
-				<div class="card-footer">
-				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-				</div>
-			</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 mb-4">
-			<div class="card h-100">
-				<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/810oMCXKSSL._AC_SX355_.jpg" alt=""></a>
-				<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">Caja gris</a>
-				</h4>
-				<h5>$24.99</h5>
-				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-				</div>
-				<div class="card-footer">
-				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-				</div>
-			</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 mb-4">
-			<div class="card h-100">
-				<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81YOmcf8RVL._AC_SX355_.jpg" alt=""></a>
-				<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">Caja marron</a>
-				</h4>
-				<h5>$24.99</h5>
-				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-				</div>
-				<div class="card-footer">
-				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-				</div>
-			</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 mb-4">
-			<div class="card h-100">
-				<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/1/14/C-vRQ5BUQAAJ79K.jpg/revision/latest/top-crop/width/300/height/300?cb=20170717122834" alt=""></a>
-				<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">Caja edicion especial</a>
-				</h4>
-				<h5>$2499.99</h5>
-				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-				</div>
-				<div class="card-footer">
-				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-				</div>
-			</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 mb-4">
-			<div class="card h-100">
-				<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/7/7c/THEBOX.jpg/revision/latest?cb=20050831142709" alt=""></a>
-				<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">!</a>
-				</h4>
-				<h5>$24.99</h5>
-				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-				</div>
-				<div class="card-footer">
-				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-				</div>
-			</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6 mb-4">
-			<div class="card h-100">
-				<a href="#"><img class="card-img-top" src="https://cdn3.dualshockers.com/wp-content/uploads/2015/08/MGS5Boss-8.jpg" alt=""></a>
-				<div class="card-body">
-				<h4 class="card-title">
-					<a href="#">Caja rosada</a>
-				</h4>
-				<h5>$24.99</h5>
-				<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-				</div>
-				<div class="card-footer">
-				<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-				</div>
-			</div>
-			</div>
+		<div class="container">
+			<br><h1 id="header1">Bienvenido a nuestra pagina!</h1>
+			<br>
+			<br>
+			<br>
 		</div>
+
 		</div>
-	</div>
 	</div>
 	<footer class="py-5 bg-dark">
 	<div class="container">
 		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
-	</footer>
 
-	</div>
-	<div>
-		<a href="logout.php">CERRAR SESION</a>
-	</div>
 </body>
 </html>

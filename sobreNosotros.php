@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,12 +47,24 @@
 					<li class="nav-item">
 					<a class="nav-link" href="contacto.php">Contacto</a>
 					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="login.php">Ingresar</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="crear_cuenta.php">Registrarse</a>
-					</li>
+					<?php
+				
+						if(isset($_SESSION["usernormal"]) || isset($_SESSION["useradmin"])){
+							echo '
+							<li class="nav-item">
+							<a class="nav-link" href="logout.php">Salir</a>
+							</li>
+							';
+						}else{
+							
+							echo '<li class="nav-item">
+							<a class="nav-link" href="login.php">Ingresar</a>
+							</li>
+							<li class="nav-item">
+							<a class="nav-link" href="crear_cuenta.php">Registrarse</a>
+							</li>';
+						}
+					?>
 					</ul>
 					</div>
 				</div>

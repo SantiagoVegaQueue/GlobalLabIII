@@ -35,55 +35,81 @@
     ?>
     <div class="bg">
 
-    <!-- Nav -->
-    <div style="margin-top: 3.5rem; max-width: 40rem;">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.php">Cortex empresario</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.php">Inicio
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="sobreNosotros.php">Sobre nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="productos.php">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.php">Contacto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">Ingresar</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="crear_cuenta.php">Registrarse</a>
-                        </li>
-                    </ul>
+        <!-- Nav -->
+        <div style="margin-top: 3.5rem; max-width: 40rem;">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="index.php">Cortex empresario</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.php">Inicio
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobreNosotros.php">Sobre nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="productos.php">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.php">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.php">Ingresar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="crear_cuenta.php">Registrarse</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </div>
-
-    <div class="container mx-auto border">
-        <div>
-            <h1>Ingresar</h1><br>
-            <form action="verificar.php" method="POST" id="formLog">
-                <input type="text" id="user_log" name="username" placeholder="Usuario"><br>
-                <br><input type="password" id="password_log" name="password" placeholder="Contraseña"><br>
-                <br><input type="submit" id="iniciar_sesion" name="enviar" value="Iniciar sesión">
-                <a href="crear_cuenta.php"><input type=button value="Registrarse">
-            </form>   
+            </nav>
         </div>
-    </div>
 
+        <div class="container">
+			<div id="app" class="row">
+				<div class="col-md-5 pt-5 mx-auto">
+					<div class="card">
+						<div class="card-header">
+							<h4>Crear cuenta</h4>
+						</div>
+
+						<form action="verificar.php" method="POST" id="loginForm" class="card-body">
+							
+							<div class="form-group">
+								<input type="text" id="user_log" name="username" placeholder="Usuario" class="form-control">
+                            </div>
+                            
+                            <div class="form-group">
+								<input type="password" id="password_log" name="password" placeholder="Contraseña" class="form-control">
+                            </div>
+
+							<br><a href="index.php"><input type="submit" id="iniciar_sesion" name="enviar" value="Iniciar sesión" class="btn btn-primary btn-block">
+						</form>
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <!--
+        <div class="container mx-auto border">
+            <div>
+                <h1>Ingresar</h1><br>
+                <form action="verificar.php" method="POST" id="formLog">
+                    <input type="text" id="user_log" name="username" placeholder="Usuario"><br>
+                    <br><input type="password" id="password_log" name="password" placeholder="Contraseña"><br>
+                    <br><input type="submit" id="iniciar_sesion" name="enviar" value="Iniciar sesión">
+                    <a href="crear_cuenta.php"><input type=button value="Registrarse">
+                </form>   
+            </div>
+        </div>
+        -->
     </div>
 
     <footer class="py-5 bg-dark">
