@@ -17,14 +17,22 @@ var fotos = document.getElementById("fotos");
         }
     
         
-        if(precio.value === "" || precio.value === null || isNaN(precio)){
+        if(precio.value === "" || precio.value === null){
             precio.style.borderColor = "#FFBABA";
-            alert("Ingrese un precio");
+            //alert("Ingrese un precio");
             evt.preventDefault();
         }else{
             precio.style.borderColor = "#DCFFD9";
         }
-    
+        
+        if(isNaN(precio.value)){
+            precio.style.borderColor = "#FFBABA";
+            alert("Ingrese un precio");
+            evt.preventDefault();
+        }
+
+
+
         if(descripcion.value === "" || descripcion.value === null){
             descripcion.style.borderColor = "#FFBABA";    
             evt.preventDefault();  
