@@ -26,7 +26,11 @@
 
     <?php
         if(isset($_SESSION["useradmin"]) || isset($_SESSION["usernormal"])){
-            header("location: index.php");
+            echo '  <script type="text/javascript">
+                        alert("Ya estas logueado");
+                        window.location ="index.php";
+                    </script>';
+           // header("location: index.php");
         }
     ?>
     <div class="bg">

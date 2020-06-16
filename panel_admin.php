@@ -41,11 +41,13 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <h1>PANEL ADMIN</h1>
-                                <form action="">
+                                <form action="subir_productos.php" method="POST" enctype="multipart/form-data">
                                     <h2>Subir productos</h2><br>
-                                    <input type="file" id="subir_archivo" multiple><br>
+                                    <br><label for="">Nombre del producto:</label>
+                                    <input type="text" name="nombre" id="nombre"><br>
+                                    <input type="file" id="subir_archivo" name="fotos"><br>
                                     <label for="">Precio:</label>
-                                    <input type="text">
+                                    <input type="text" name="precio">
                                     <br><label for="">Descripcion del producto</label><br>
                                     <textarea name="descripcion" id="descripcion" cols="50" rows="20" placeholder="Añade una breve descripción del producto"></textarea><br>
                                     <input type="submit" value="Enviar">

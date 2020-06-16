@@ -14,7 +14,8 @@
     if(mysqli_num_rows($resultFirst)>0){
         header("location: crear_cuenta.php");
     }else{
-        $sql = "INSERT INTO usuarios (nombre,apellido,username,email,password,rol) VALUES ('$nombre','$apellido','$username','$email','$pass','$rol')";
+        $sql = "INSERT INTO usuarios (nombre,apellido,username,email,password,rol) 
+                VALUES ('$nombre','$apellido','$username','$email','$pass','$rol')";
         //Mediante los procediminetos mysqli, verificamos que la inserccion sea exitosa
         if(mysqli_query($conn,$sql)){
             header('location:login.php');
