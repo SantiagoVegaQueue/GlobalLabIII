@@ -25,7 +25,23 @@
 	<?php
 		if(!isset($_SESSION["usernormal"])){
 			echo "haga login";
-		}
+		} 
+		/*if (isset($_SESSION["useradmin"])){
+			echo '<div class="row">
+						<div class="d-flex">
+							<div id="sidebar-container">
+								<div class="logo">
+									<h4>Cortex Empresario</h4>
+								</div>
+						<div class="menu">
+								<a href="#"class="d-block"><i class="icon ion-md-people"></i>Usarios</a>
+								<a href="#"class="d-block"><i class="icon ion-md-appstore"></i></i>Subir productos</a>
+								<a href="#"class="d-block"><i class="icon ion-md-contact"></i>Perfil</a>
+								<a href="index.php"class="d-block"><i class="icon ion-md-home"></i>Página de inicio</a>
+						</div>
+					</div>
+			</div>';
+		}*/
 	?>
 	
 	<div class="bg">

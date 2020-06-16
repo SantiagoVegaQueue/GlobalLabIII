@@ -7,39 +7,6 @@ var rol = document.getElementById("rol");
 
 var expReg=  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
 
-/*function enviarForm(){
-      
-    if(nombre.value === "" || nombre.value === null){
-        nombre.style.borderColor = "#FFBABA";
-    }else{
-        nombre.style.borderColor = "#DCFFD9";
-    }
-
-    if(apellido.value === "" || apellido.value === null){
-        apellido.style.borderColor = "#FFBABA";
-    }else{
-        apellido.style.borderColor = "#DCFFD9";
-    }
-
-    if(usuario.value === "" || usuario.value === null){
-        usuario.style.borderColor = "#FFBABA";
-    }else{
-        usuario.style.borderColor = "#DCFFD9";
-    }
-
-    if(email.value === "" || email.value === null || !expReg.test(email.value)){
-        email.style.borderColor = "#FFBABA";      
-    }else{
-        email.style.borderColor = "#DCFFD9";
-    }
-    if(password.value === "" || password.value === null){
-        password.style.borderColor = "#FFBABA";
-    }else{
-        password.style.borderColor = "#DCFFD9";
-    }
-    return false;
-
-}*/
 //--------VALIDACION DEL LADO DEL CLIENTE REGISTRO----------------------
     var form = document.getElementById("formReg");
     
@@ -82,5 +49,36 @@ var expReg=  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
         
     });
 
-//--------VALIDACION DEL LADO DEL CLIENTE LOGIN----------------------
+/*function enviarForm(){
+      
+    if(nombre.value === "" || nombre.value === null){
+        nombre.style.borderColor = "#FFBABA";
+    }else{
+        nombre.style.borderColor = "#DCFFD9";
+    }
 
+    if(apellido.value === "" || apellido.value === null){
+        apellido.style.borderColor = "#FFBABA";
+    }else{
+        apellido.style.borderColor = "#DCFFD9";
+    }
+
+    if(usuario.value === "" || usuario.value === null){
+        usuario.style.borderColor = "#FFBABA";
+    }else{
+        usuario.style.borderColor = "#DCFFD9";
+    }
+
+    if(email.value === "" || email.value === null || !expReg.test(email.value)){
+        email.style.borderColor = "#FFBABA";      
+    }else{
+        email.style.borderColor = "#DCFFD9";
+    }
+    if(password.value === "" || password.value === null){
+        password.style.borderColor = "#FFBABA";
+    }else{
+        password.style.borderColor = "#DCFFD9";
+    }
+    return false;
+
+}*/
