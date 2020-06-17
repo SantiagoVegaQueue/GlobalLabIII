@@ -12,23 +12,6 @@
     <title>PANEL ADMIN</title>
 </head>
 <body>
-            <!-- START SIDE BAR-->
-<div class="container mx-auto">
-    <div class="row">
-        <div class="d-flex">
-                <div id="sidebar-container">
-                    <div class="logo">
-                        <h4>Cortex Empresario</h4>
-                    </div>
-                    <div class="menu">
-                        <a href="#"class="d-block"><i class="icon ion-md-people"></i>Usarios</a>
-                        <a href="#"class="d-block"><i class="icon ion-md-appstore"></i></i>Subir productos</a>
-                        <a href="#"class="d-block"><i class="icon ion-md-contact"></i>Perfil</a>
-                        <a href="index.php"class="d-block"><i class="icon ion-md-home"></i>Página de inicio</a>
-                    </div>
-                </div>
-        </div>
-                    <!-- FINISH SIDE BAR-->
         <?php
             if(!isset($_SESSION["useradmin"])){
                 echo "No tiene permiso";
@@ -36,31 +19,51 @@
                 die();
             }
         ?>
-            <div class="contenido">
-                <section>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-4">
-                                
-                            </div>
-                            <div class="col-md-8 mx-auto">
-                                <h1>PANEL ADMIN</h1>
-                                <form action="subir_productos.php" id="formUpload" method="POST" enctype="multipart/form-data">
-                                    <h2>Subir productos</h2><br>
-                                    <br><label for="">Nombre del producto:</label>
-                                    <input type="text" name="nombre" id="nombre"><br>
-                                    <input type="file" id="fotos" name="fotos"><br>
-                                    <label for="">Precio:</label>
-                                    <input type="text" id="precio" name="precio">
-                                    <br><label for="">Descripcion del producto</label><br>
-                                    <textarea name="descripcion" id="descripcion" cols="50" rows="20" placeholder="Añade una breve descripción del producto"></textarea><br>
-                                    <input type="submit" value="Enviar">
-                                </form>
-                            </div>
-                        </div>    
-                    </div>
-                </section>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+            <img src="https://img.icons8.com/color/96/000000/admin-settings-male.png"/>
             </div>
+
+        <ul class="list-unstyled components">
+            <p>Dummy Heading</p>
+            <li>
+                <a href="#">Usuarios registrados</a>
+            </li>
+            <li>
+                <a href="#">Subir productos</a>
+            </li>
+            <li>
+                <a href="#">Ver productos subidos</a>
+            </li>
+            <li>
+                <a href="#">Pagina de inicio</a>
+            </li>
+            <li>
+                <a href="logout.php">Salir</a>
+            </li>
+        </ul>
+        </nav>
+
+        <div id="content">
+            <h1>PANEL ADMIN</h1>
+                <form action="subir_productos.php" id="formUpload" method="POST" enctype="multipart/form-data">
+                    <h2>Subir productos</h2><br>
+                        <br><label for="">Nombre del producto:</label>
+                             <input type="text" name="nombre" id="nombre"><br>
+                             <input type="file" id="fotos" name="fotos"><br>
+                             <label for="">Precio:</label>
+                             <input type="text" id="precio" name="precio">
+                         <br><label for="">Descripcion del producto</label><br>
+                             <textarea name="descripcion" id="descripcion" cols="50" rows="20" placeholder="Añade una breve descripción del producto"></textarea><br>
+                             <input type="submit" value="Enviar">
+                </form>  
+                <h1>Lorem</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ullam eius, amet distinctio tenetur in et obcaecati pariatur, dolor modi nulla tempore inventore? Quasi debitis recusandae quisquam molestias velit cupiditate.</p>       
+        </div>
+
+    </div>
     </div>
     
 </div>
