@@ -2,8 +2,8 @@
 var usuario = document.getElementById("user_log");
 var password = document.getElementById("password_log");
 
-//--------VALIDACION DEL LADO DEL CLIENTE REGISTRO----------------------
-    var form = document.getElementById("formLog");
+//--------VALIDACION DEL LADO DEL CLIENTE LOGIN----------------------
+    var form = document.getElementById("loginForm");
     
     form.addEventListener('submit', function(evt){
         

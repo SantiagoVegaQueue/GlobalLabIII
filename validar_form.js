@@ -4,14 +4,13 @@ var usuario = document.getElementById("nombre_usuario");
 var email = document.getElementById("email");
 var password = document.getElementById("password");
 var rol = document.getElementById("rol");
-
-var expReg=  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
+var form = document.getElementById("formReg");
+var expReg= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
 
 //--------VALIDACION DEL LADO DEL CLIENTE REGISTRO----------------------
-    var form = document.getElementById("formReg");
+ 
     
     form.addEventListener('submit', function(evt){
-        
 
         if(nombre.value === "" || nombre.value === null){
             nombre.style.borderColor = "#FFBABA";
@@ -40,6 +39,7 @@ var expReg=  /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/;
         }else{
             email.style.borderColor = "#DCFFD9";
         }
+
         if(password.value === "" || password.value === null){
             password.style.borderColor = "#FFBABA";
             evt.preventDefault();

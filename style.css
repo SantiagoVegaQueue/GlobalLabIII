@@ -5,10 +5,10 @@ body, html{
     font-family: 'Raleway', sans-serif;
 }
 
-a{
+/*a{
     color:#FFFFFA !important;
 }
-
+*/
 .bg {
     background-color: #EAEAEA;
     height: 100%;
@@ -42,12 +42,21 @@ a{
     background-color: #515052;
 }
 
+#navbar-style a{
+    color:#FFFFFA !important;
+}
 #text-style{
     color:#FFFFFA;
 }
 
-#form-btn{
+.form-btn{
     background-color:#333138;
+}
+.link_operacion{
+    color: black;
+}
+.link_operacion,a:link,a:visited,a:active{
+    text-decoration: none;
 }
 /*
 .border{
