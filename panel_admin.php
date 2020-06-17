@@ -13,7 +13,7 @@
 </head>
 <body>
             <!-- START SIDE BAR-->
-<div class="container-fluid">
+<div class="container mx-auto">
     <div class="row">
         <div class="d-flex">
                 <div id="sidebar-container">
@@ -31,7 +31,8 @@
                     <!-- FINISH SIDE BAR-->
         <?php
             if(!isset($_SESSION["useradmin"])){
-                echo "no tiene permiso";
+                echo "No tiene permiso";
+                header("location: index.php");
                 die();
             }
         ?>
@@ -39,7 +40,10 @@
                 <section>
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-12">
+                            <div class="col-md-4">
+                                
+                            </div>
+                            <div class="col-md-8 mx-auto">
                                 <h1>PANEL ADMIN</h1>
                                 <form action="subir_productos.php" id="formUpload" method="POST" enctype="multipart/form-data">
                                     <h2>Subir productos</h2><br>

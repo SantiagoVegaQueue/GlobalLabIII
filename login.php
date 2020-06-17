@@ -12,7 +12,7 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
+     
     <!-- Funcionalidad NAV -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -37,7 +37,7 @@
 
         <!-- Nav -->
         <div style="margin-top: 3.5rem; max-width: 40rem;">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="index.php">Cortex empresario</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
@@ -73,24 +73,20 @@
         </div>
 
         <div class="container">
-			<div id="app" class="row">
+			<div id="app" class="row"> 
 				<div class="col-md-5 pt-5 mx-auto">
 					<div class="card">
 						<div class="card-header">
-							<h4>Crear cuenta</h4>
+							<h4 style="text-align: center;">Ingresa a tu cuenta</h4>
 						</div>
-
 						<form action="verificar.php" method="POST" id="loginForm" class="card-body">
-							
 							<div class="form-group">
 								<input type="text" id="user_log" name="username" placeholder="Usuario" class="form-control">
                             </div>
-                            
                             <div class="form-group">
 								<input type="password" id="password_log" name="password" placeholder="Contraseña" class="form-control">
                             </div>
-
-							<br><a href="index.php"><input type="submit" id="iniciar_sesion" name="enviar" value="Iniciar sesión" class="btn btn-primary btn-block">
+							<br><a href="index.php"><input id="form-btn" type="submit" id="iniciar_sesion" name="enviar" value="Iniciar sesión" class="btn btn-primary btn-block">
 						</form>
 					</div>
 				</div>

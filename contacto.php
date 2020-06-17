@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+     
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -28,7 +28,7 @@
 
         <!-- Nav -->
 		<div class="container" style="margin-top: 3.5rem; max-width: 40rem;">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
 				<div class="container">
 					<a class="navbar-brand" href="#">Cortex empresario</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,8 +56,14 @@
 							echo '
 							<li class="nav-item">
 							<a class="nav-link" href="logout.php">Salir</a>
-							</li>
-							';
+							</li>';
+							if(isset($_SESSION["useradmin"])){
+								echo '
+								<li class="nav-item">
+								<a class="nav-link" href="panel_admin.php">P. Admin</a>
+								</li>
+								';
+							}
 						}else{
 							
 							echo '<li class="nav-item">
@@ -76,17 +82,20 @@
 
         <!-- Iconos -->
         <div class="container">
-            <i class="fa fa-phone fa-2x" aria-hidden="true">123 456-7890</i>
-            <br><br>
-            <i class="fa fa-envelope fa-2x" aria-hidden="true">cortexempresario@yahoo.com</i>
-            <br><br>
-            <i class="fa fa-facebook-official fa-2x" aria-hidden="true">CortexEmpresario</i>
-            <br><br>
-            <i class="fa fa-instagram fa-2x" aria-hidden="true">CortexEmpresarioAR</i>
-            <br><br>
-            <i class="fa fa-twitter fa-2x" aria-hidden="true">CortexEmpresario</i>
-            <br><br>
-            
+            <div class="row">
+				<div class="col-12" style="position : absolute;bottom : 0;">
+					<i class="fa fa-phone fa-1x" aria-hidden="true">123 456-7890</i>
+					<br><br>
+					<i class="fa fa-envelope fa-1x" aria-hidden="true">cortexempresario@yahoo.com</i>
+					<br><br>
+					<i class="fa fa-facebook-official fa-1x" aria-hidden="true">CortexEmpresario</i>
+					<br><br>
+					<i class="fa fa-instagram fa-1x" aria-hidden="true">CortexEmpresarioAR</i>
+					<br><br>
+					<i class="fa fa-twitter fa-1x" aria-hidden="true">CortexEmpresario</i>
+					<br><br>
+				</div>
+			</div>
         </div>
 	</div>
 

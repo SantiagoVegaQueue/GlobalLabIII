@@ -11,7 +11,7 @@
 
 	<!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    
+     
 	<!-- Funcionalidad NAV -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -25,7 +25,7 @@
 
 		<!-- Nav -->
 		<div class="container" style="margin-top: 3.5rem; max-width: 40rem;">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
 				<div class="container">
 					<a class="navbar-brand" href="#">Cortex empresario</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,9 +53,16 @@
 							echo '
 							<li class="nav-item">
 							<a class="nav-link" href="logout.php">Salir</a>
-							</li>
-							';
-						}else{
+							</li>';
+							if(isset($_SESSION["useradmin"])){
+								echo '
+								<li class="nav-item">
+								<a class="nav-link" href="panel_admin.php">P. Admin</a>
+								</li>
+								';
+							}
+						}
+							else{
 							
 							echo '<li class="nav-item">
 							<a class="nav-link" href="login.php">Ingresar</a>
@@ -72,7 +79,7 @@
 		</div>
 
 		<div class="container mx-auto">
-			<h1>Vendemos cajas</h1>
+			<h1 class="p-5" style="text-align: center;">Vendemos cajas</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
 			 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>

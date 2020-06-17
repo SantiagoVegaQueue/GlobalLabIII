@@ -25,7 +25,7 @@
 
 		<!-- Nav -->
 		<div class="container" style="margin-top: 3.5rem; max-width: 40rem;">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
 				<div class="container">
 					<a class="navbar-brand" href="#">Cortex empresario</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,8 +53,14 @@
 							echo '
 							<li class="nav-item">
 							<a class="nav-link" href="logout.php">Salir</a>
-							</li>
-							';
+							</li>';
+							if(isset($_SESSION["useradmin"])){
+								echo '
+								<li class="nav-item">
+								<a class="nav-link" href="panel_admin.php">P. Admin</a>
+								</li>
+								';
+							}
 						}else{
 							
 							echo '<li class="nav-item">
@@ -68,12 +74,28 @@
 					</ul>
 					</div>
 				</div>
-			</nav>
+			</nav> 
 		</div>
+        <div class="container mx-auto">  
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="text-center">
+                        <br><br><br><h1>Lista de productos</h1>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="col-md-6 mx-auto" style="width: 182px;">
+                <nav aria-label="NavPaginacion">
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link bg-primary" href="#" >Previous</a></li>
+                        <li class="page-item"><a class="page-link bg-primary" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>  
 
-		<div class="container">
-		<br><br><br><h2 class="my-4" align="center">Lo mas vendido</h2>
-
+		<!--
 			<div class="row">
 				<div class="col-lg-4 col-md-6 mb-4">
 				<div class="card h-100">
@@ -172,7 +194,9 @@
 				</div>
 			</div>
 		</div>
-
+		-->
+		
+		<!--
 		<div class="container">
 			<div id="app" class="row">
 				<div class="col-md-4 pt-5">
@@ -206,14 +230,14 @@
 				</div>
 			</div>
 		</div>
+		-->
 	</div>
 
 	<footer class="py-5 bg-dark">
 	<div class="container">
 		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
-	</footer>
+    </footer>
 
-	<script src="app.js"></script>
 </body>
 </html>

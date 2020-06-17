@@ -17,6 +17,10 @@
     
     <!-- Hoja de estilo CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     
     <style>
         .border{
@@ -40,7 +44,7 @@
     
         <!-- Nav -->
         <div style="margin-top: 3.5rem; max-width: 40rem;">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
                 <div class="container">
                     <a class="navbar-brand" href="#">Cortex empresario</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,9 +83,8 @@
 				<div class="col-md-5 pt-5 mx-auto">
 					<div class="card">
 						<div class="card-header">
-							<h4>Crear cuenta</h4>
+							<h4 style="text-align: center;">Crear cuenta</h4>
 						</div>
-
 						<form action="register.php" method="POST" id="registerForm" class="card-body">
 							<div class="form-group">
 								<input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control">
@@ -102,14 +105,15 @@
                             <div class="form-group">
 								<input type="password" name="password" id="password" placeholder="Contraseña" class="form-control">
                             </div>
-                            
-                            <br><label for="">Rol</label>
-                            <select name="rol" id="rol">
-                                <option value="usuario">Usuario</option>
-                                <option value="admin">Administrador</option>
-                            </select><br>
+                            <div>
+                                <br><h4 class="label-default" for="" name="Rol">Rol</h4>
+                                <select name="rol" id="rol">
+                                    <option value="usuario">Usuario</option>
+                                    <option value="admin">Administrador</option>
+                                </select>
+                            </div><br><br><br>
 
-							<input type="submit" value="Enviar" class="btn btn-primary btn-block">
+							<a href="index.php"><input id="form-btn" type="submit" value="Enviar" class="btn btn-primary btn-block">
 						</form>
 					</div>
 				</div>
@@ -149,6 +153,12 @@
 
 </div>
 <script src="validar_form.js"></script>
+
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
+        </div>
+	</footer>
 </body>
 
 </html>
