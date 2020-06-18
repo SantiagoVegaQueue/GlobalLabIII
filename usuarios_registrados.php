@@ -28,18 +28,18 @@
             </div>
         
         <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
+            <p>Panel</p>
             <li>
-                <a href="#">Usuarios registrados</a>
+                <a href="usuarios_registrados.php">Usuarios registrados</a>
             </li>
             <li>
-                <a href="#">Subir productos</a>
+                <a href="panel_admin.php">Subir productos</a>
             </li>
             <li>
-                <a href="#">Ver productos subidos</a>
+                <a href="mostrar_productos.php">Ver productos subidos</a>
             </li>
             <li>
-                <a href="#">Pagina de inicio</a>
+                <a href="index.php">Pagina de inicio</a>
             </li>
             <li>
                 <a href="logout.php">Salir</a>

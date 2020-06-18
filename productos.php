@@ -57,7 +57,7 @@
 							if(isset($_SESSION["useradmin"])){
 								echo '
 								<li class="nav-item">
-								<a class="nav-link" href="panel_admin.php">P. Admin</a>
+								<a class="nav-link" href="usuarios_registrados.php">P. Admin</a>
 								</li>
 								';
 							}

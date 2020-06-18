@@ -27,18 +27,18 @@
             </div>
         
         <ul class="list-unstyled components">
-            <p>Dummy Heading</p>
+            <p>Panel</p>
             <li>
                 <a href="usuarios_registrados.php">Usuarios registrados</a>
             </li>
             <li>
-                <a href="#">Subir productos</a>
+                <a href="panel_admin.php">Subir productos</a>
             </li>
             <li>
                 <a href="mostrar_productos.php">Ver productos subidos</a>
             </li>
             <li>
-                <a href="#">Pagina de inicio</a>
+                <a href="index.php">Pagina de inicio</a>
             </li>
             <li>
                 <a href="logout.php">Salir</a>
@@ -48,19 +48,38 @@
         <!-- END Sidebar -->
 
         <!-- Content -->
-        <div id="content">
-                <form action="subir_productos.php" id="formUpload" method="POST" enctype="multipart/form-data">
-                    <label for="">Nombre del producto:</label>
-                    <input type="text" name="nombre" id="nombre"><br>
-                    <input type="file" id="fotos" name="fotos"><br>
-                    <label for="">Precio:</label>
-                    <input type="text" id="precio" name="precio">
-                    <br><label for="">Descripcion del producto</label><br>
-                    <textarea name="descripcion" id="descripcion" cols="50" rows="20" placeholder="Añade una breve descripción del producto"></textarea><br>
-                    <input type="submit" value="Enviar">
-                </form>  
-                <h1>Lorem</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ullam eius, amet distinctio tenetur in et obcaecati pariatur, dolor modi nulla tempore inventore? Quasi debitis recusandae quisquam molestias velit cupiditate.</p>       
+        <div class="container">
+            <div class="row">
+                <div id="content" class="col-md-12 mx-auto">
+                    <h1>Panel de Administrador ABM</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ullam eius, amet distinctio tenetur in et obcaecati pariatur,
+                     dolor modi nulla tempore inventore? Quasi debitis recusandae quisquam molestias velit cupiditate.</p>
+                    <form action="subir_productos.php" id="formUpload" method="POST" enctype="multipart/form-data" class="card-body">
+                        <div class="form-group">
+                            <label for="">Nombre del producto:</label>
+                            <input type="text" name="nombre" id="nombre"><br>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="file" id="fotos" name="fotos"><br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Precio:</label>
+                            <input type="text" id="precio" name="precio">
+                        </div>
+
+                        <div class="form-group">
+                            <br><label for="">Descripcion del producto</label><br>
+                            <textarea name="descripcion" id="descripcion" cols="50" rows="20" placeholder="Añade una breve descripción del producto"></textarea><br>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>        
+                </div>
+            </div>
         </div>
         <!-- END Content -->
     </div>
