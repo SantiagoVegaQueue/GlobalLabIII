@@ -105,13 +105,19 @@
                             <div class="form-group">
 								<input type="password" name="password" id="password" placeholder="Contraseña" class="form-control">
                             </div>
-                            <div>
-                                <br><h4 class="label-default" name="Rol">Rol</h4>
-                                <select name="rol" id="rol">
+                            <div class="form-group">
+                                <label for="" >Rol</label>
+                                <select name="rol" id="rol" class="custom-select" placeholder="Elija su rol">
                                     <option value="usuario">Usuario</option>
                                     <option value="admin">Administrador</option>
                                 </select>
-                            </div><br><br><br>
+                            </label>
+                            </div>
+                            <div class="form-group">
+                                
+                            </div>
+                                
+                            
 
 							<input type="submit" id="form-btn"  value="Enviar" class="btn btn-primary btn-block">
 						</form>

@@ -1,6 +1,10 @@
 <?php
     session_start();
-    
+    if(!isset($_SESSION["useradmin"])){
+        echo "No tiene permiso";
+        header("location: index.php");
+        die();
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,13 +17,6 @@
     <title>Usuarios registrados</title>
 </head>
 <body>
-        <?php
-            if(!isset($_SESSION["useradmin"])){
-                echo "No tiene permiso";
-                header("location: index.php");
-                die();
-            }
-        ?>
     <div class="wrapper">
         <!-- Sidebar -->
         <nav id="sidebar">
@@ -50,12 +47,9 @@
 
         <!-- Content -->
         <div id="content">
-            <nav class="navbar navbar-light bg-light">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </nav> 
+            <div>
+                <h2>Usuarios registrados</h2>
+            </div>
 
             <div>
                 <table class="table">
@@ -73,12 +67,28 @@
                     <tbody>
                         <?php
                             require("conexion.php");
-                            //Realizamos la consulta sql
-                           $sql = "SELECT * FROM usuarios";
-                            //Seleccionamos todos los elementos de la tabla productos
+                            $userPorPagina = 3;
+                            
+                            $sql = "SELECT * FROM usuarios";
+                            
                             $result = mysqli_query($conn,$sql);
+                            $row = mysqli_num_rows($result);
+                            $numPags = ceil($row/$userPorPagina);
+
+                           if(!isset($_GET["pagina"])){
+                                $pagina = 1;
+                            }else{
+                                $pagina = $_GET["pagina"];
+                            }
+                            
+                            $empiezaPor = ($pagina-1) * $userPorPagina;
+                            
+                            $sql= "SELECT * FROM usuarios ORDER BY id LIMIT $empiezaPor,$userPorPagina";
+                            $result= mysqli_query($conn,$sql);
+                            //Realizamos la consulta sql
+                            //Seleccionamos todos los elementos de la tabla productos
                             //Guardamos en una variable $result en donde verifica la conexion y la consulta
-                            while($row = mysqli_fetch_assoc($result)){
+                            while($row = mysqli_fetch_array($result)){
                             //Mostramos en un while con una variable $row, en donde el procedimiento mysqli_fectch_asscoc($result)
                             //almacena la variable $result
                             //Cerramos esta linea de php y mostramos los datos en la tabla
@@ -97,21 +107,16 @@
                         ?>
                     </tbody>
                 </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                    <?php
+                        for($pagina = 1; $pagina <= $numPags; $pagina++)
+                            echo '<li class="page-item"><a class="page-link" href="usuarios_registrados.php?pagina='.$pagina.'">'.$pagina.'</a></li>';
+                    ?>
+                    </ul>
+                </nav>
             </div>  
-            <nav aria-label="Page navigation example">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1">Previous</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
-            </nav>
-
+            
         </div>
         <!-- END Content -->
     </div>

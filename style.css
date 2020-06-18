@@ -71,13 +71,12 @@ body, html{
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #515052;
-    color: #fff;
-    transition: all 0.3s;
+    background: #252422;
+    
 }
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #515052;
+    background: #252422;
     text-align: center;
 }
 
@@ -87,7 +86,7 @@ body, html{
 }
 
 #sidebar ul p {
-    color: #fff;
+    
     padding: 10px;
 }
 
@@ -96,20 +95,16 @@ body, html{
     font-size: 1.1em;
     display: block;
 }
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
+
 #content {
     width: calc(100% - 250px);
     padding: 40px;
     min-height: 100vh;
-    transition: all 0.3s;
     position: absolute;
     top: 0;
     right: 0;
 }
-textarea { 
+/*textarea { 
     width: 200px; 
     min-width:200px; 
     max-width:200px; 
@@ -118,7 +113,7 @@ textarea {
     min-height:200px;  
     max-height:200px;
 }
-/*
+
 .border{
     width: 300px;
     height: 320px;
@@ -129,3 +124,7 @@ textarea {
     padding: 30px;
 }
 */
+.form-control:focus {
+    border-color: none;
+
+  }
