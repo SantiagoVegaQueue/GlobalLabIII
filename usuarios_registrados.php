@@ -56,6 +56,7 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </nav> 
+
             <div>
                 <table class="table">
                     <thead class="thead-dark">
@@ -64,22 +65,16 @@
                             <th scope="col">Apellido</th>
                             <th scope="col">Usuario</th>
                             <th scope="col">E-mail</th>
+                            <th scope="col">Rol</th>
                             <th scope="col">Operaciones</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <?php
-                            if(!isset($_SESSION["useradmin"])){
-                                    echo "No tiene permiso";
-                                    header("location: index.php");
-                                    die();
-                                }
-                        ?>
-                        <?php
                             require("conexion.php");
                             //Realizamos la consulta sql
-                            $sql = "SELECT * FROM usuarios";
+                           $sql = "SELECT * FROM usuarios";
                             //Seleccionamos todos los elementos de la tabla productos
                             $result = mysqli_query($conn,$sql);
                             //Guardamos en una variable $result en donde verifica la conexion y la consulta
@@ -87,20 +82,36 @@
                             //Mostramos en un while con una variable $row, en donde el procedimiento mysqli_fectch_asscoc($result)
                             //almacena la variable $result
                             //Cerramos esta linea de php y mostramos los datos en la tabla
-                        ?>
+                            ?>
+                       
                         <tr>
                             <td><?php echo $row["nombre"];?></td>
                             <td><?php echo $row["apellido"];?></td>
                             <td><?php echo $row["username"];?></td>
                             <td><?php echo $row["email"];?></td>
+                            <td><?php echo $row["rol"];?></td>
                             <td><a href="eliminar_usuarios.php?id=<?php echo $row["id"];?>">Eliminar</a></td>
                         </tr>
                         <?php
-                                }
-                            ?>
+                            }
+                        ?>
                     </tbody>
                 </table>
-            </div>     
+            </div>  
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+
         </div>
         <!-- END Content -->
     </div>
@@ -109,3 +120,6 @@
     
 </body>
 </html>
+
+
+

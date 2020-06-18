@@ -20,6 +20,11 @@
                 }elseif($user == $row["username"] && $pass == $row["password"] && $row["rol"] == "usuario"){
                     $_SESSION["usernormal"] = $row["rol"];
                     header("location: index.php");
+                }else{
+                    echo '  <script type="text/javascript">
+                        alert("Usuario o Contraseña incorrectos");
+                        window.location ="login.php";
+                    </script>';
                 }
             }
             //echo "username: " . $row["username"]. " - password: " . $row["password"]. " " . $row["rol"]. "<br>";
