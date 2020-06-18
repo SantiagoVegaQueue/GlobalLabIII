@@ -120,8 +120,9 @@
 					?>
 				
         </div>
-</div>
-				<nav aria-label="Page navigation example">
+	</div>
+	<div>
+	<nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                     <?php
                         for($pagina = 1; $pagina <= $numPags; $pagina++)
@@ -129,15 +130,18 @@
                     ?>
                     </ul>
                 </nav>
-         
 	</div>
-        
-
-	<footer class="py-5 bg-dark">
+				
+		 <footer id="footer" class="py-5">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 		</div>
     </footer>
+	
+</div>
+        
 
+	
+	
 </body>
 </html>

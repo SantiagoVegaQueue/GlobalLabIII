@@ -106,19 +106,30 @@
 		</nav>
 		</div>
 
-		<div class="container">
-			<br><h1 id="header1">Bienvenido a nuestra pagina!</h1>
-			<br>
-			<br>
-			<br>
+		<div class="container-fluid">
+			<h1 id="header1" class="text-center">Cuchilleria Artesanal</h1>
+			<div class="row">
+				<div class="col-6">
+					<h1 id="header1">Los mejores cuchillos artesanales</h1>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil eos tempora natus consequatur, incidunt odio accusantium obcaecati doloremque architecto sed assumenda necessitatibus voluptatum, quaerat labore atque doloribus tenetur! Aperiam, accusantium.</p>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quo mollitia placeat pariatur, numquam officia, accusantium nihil molestias ullam voluptatibus iure. Quia numquam rem et est eius voluptates laboriosam dicta?</p>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere quod exercitationem quidem ad, eaque nemo nulla repellendus cum officia corporis cumque iste vel non doloribus numquam voluptate vitae. Numquam, sequi.</p>
+					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste quibusdam exercitationem nobis dolorum expedita aperiam nesciunt dicta, suscipit culpa ipsam veritatis vel! Necessitatibus provident ullam neque dolorum quisquam delectus omnis.</p>
+				</div>
+				<div class="col-6">
+					<img src="img/forge1.png" alt="" class="img-fluid" id="img-index">
+				</div>
+			</div>
+			
 		</div>
+		
 
 		</div>
 	</div>
-	<footer class="py-5 bg-dark">
+	<footer id="footer" class="py-5">
 	<div class="container">
 		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
-
+			</footer>
 </body>
 </html>

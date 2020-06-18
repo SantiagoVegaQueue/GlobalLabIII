@@ -35,7 +35,7 @@ body, html{
 
 #header1{
     padding-top : 90px;
-    text-align : center;
+    padding-bottom: 30px;
 }
 
 #navbar-style{
@@ -134,6 +134,17 @@ body, html{
 .navbar-search{
     background-color: none;
     position: left;
+}
+#footer{
+    background-color:#1D3E61;
+}
+.col-6{
+    padding-left: 100px;
+}
+#img-index{
+    padding-top: 50px;
+    height: 50%;
+    
 }
 /*textarea { 
     width: 200px; 
