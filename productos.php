@@ -20,13 +20,13 @@
 	<!-- Hoja de estilo CSS -->
 	<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="all-body">
 	<div class="bg">
 		<!-- Nav -->
 		<div class="container" style="margin-top: 3.5rem; max-width: 40rem;">
 			<nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
 				<div class="container">
-					<a class="navbar-brand" href="#">Cortex empresario</a>
+					<a class="navbar-brand" href="index.php">Cortex empresario</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
@@ -43,9 +43,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="productos.php">Productos</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="contacto.php">Contacto</a>
-							</li>
+							
 					<?php
 						if(isset($_SESSION["usernormal"]) || isset($_SESSION["useradmin"])){
 							echo '
@@ -74,9 +72,11 @@
 				</div>
 			</nav> 
 		</div>
-<div class="album py-5">
-
-	<div class="container">  
+		<div class="album py-5">
+		<div class="container">  
+		<div>
+			<h1 class="text-center">Productos a la venta</h1>
+		</div>
         <div class="row">
 					<?php
 					require("conexion.php");
@@ -119,29 +119,29 @@
 					}
 					?>
 				
-        </div>
-	</div>
-	<div>
-	<nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                    <?php
-                        for($pagina = 1; $pagina <= $numPags; $pagina++)
-                            echo '<li class="page-item"><a class="page-link" href="productos.php?pagina='.$pagina.'">'.$pagina.'</a></li>';
-                    ?>
-                    </ul>
-                </nav>
-	</div>
-				
-		 <footer id="footer" class="py-5">
-		<div class="container">
-			<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 		</div>
-    </footer>
+				<div class="paginacion">
+					<nav aria-label="Page navigation example">
+                    	<ul class="pagination justify-content-center">
+							<?php
+								for($pagina = 1; $pagina <= $numPags; $pagina++)
+									echo '<li class="page-item"><a class="page-link" href="productos.php?pagina='.$pagina.'">'.$pagina.'</a></li>';
+							?>
+                    	</ul>
+                	</nav>
+				</div>
+	</div>
 	
 </div>
+	</div>
+	
         
 
-	
+	<footer id="footer" class="py-5">
+		<div class="container">
+			<p class="m-0 text-center text-white">Global Laboratorio III</p>
+		</div>
+    </footer>
 	
 </body>
 </html>

@@ -30,7 +30,7 @@
     </style>
 </head>
 
-<body>
+<body id="all-body">
     <?php
         if(isset($_SESSION["useradmin"]) || isset($_SESSION["usernormal"])){
             echo '  <script type="text/javascript">
@@ -46,7 +46,7 @@
         <div style="margin-top: 3.5rem; max-width: 40rem;">
         <nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
                 <div class="container">
-                    <a class="navbar-brand" href="#">Cortex empresario</a>
+                    <a class="navbar-brand" href="index.php">Cortex empresario</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     </button>
@@ -63,9 +63,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="productos.php">Productos</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacto.php">Contacto</a>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link" href="login.php">Ingresar</a>
                             </li>
@@ -125,42 +123,8 @@
 				</div>
 			</div>
         </div>
-        
-        <!--
-	    <div class="container mx-auto border">
-            <h1>Registrarse</h1>
-            <form action="register.php" method="POST" style="margin-top: 30px; max-width: 40px;" id="formReg">
-                
-                <label for="">Nombre</label>
-                <input type="text" name="nombre" id="nombre" ><br>
-                
-                <br><label for="">Apellido</label>
-                <input type="text" name="apellido" id="apellido" ><br>
-                
-                <br><label for="">Usuario</label>
-                <input type="text" name="username" id="nombre_usuario" ><br>
-                
-                <br><label for="">Email</label>
-                <input type="email" name="email" id="email" ><br>
-                
-                <br><label for="">Contraseña</label>
-                <input type="password" name="password" id="password" ><br>
-                
-                <br><label for="">Rol</label>
-                <select name="rol" id="rol">
-                    <option value="usuario">Usuario</option>
-                    <option value="admin">Administrador</option>
-                </select><br>
-                
-                <br><a href="index.php"><input type="submit" value="Enviar">
-            </form>
-        </div>
-        -->
-
 </div>
-
-
-    <footer class="py-5 bg-dark">
+    <footer id="footer" class="py-5">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
         </div>

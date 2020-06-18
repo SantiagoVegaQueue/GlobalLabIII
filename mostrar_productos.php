@@ -53,13 +53,6 @@
             <div class="header-buscar">
                 <h2 class="text-center">Productos subidos</h2>
             </div>
-            <nav class="navbar-search">
-                <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                <button class="btn btn-primary" type="submit">Buscar</button>
-                </form>
-            </nav>
-        
             <div class="tabla-users">
                 <table class="table">
                         <thead class="thead-dark">
@@ -82,9 +75,21 @@
                             ?>
                             <?php
                                 require("conexion.php");
+                                $prodPorPagina = 3;
                                 //Realizamos la consulta sql
                                 $sql = "SELECT * FROM productos";
                                 //Seleccionamos todos los elementos de la tabla productos
+                                $result = mysqli_query($conn,$sql);
+                                $row = mysqli_num_rows($result);
+                                $numPags = ceil($row/$prodPorPagina);
+                                if(!isset($_GET["pagina"])){
+                                    $pagina = 1;
+                                }else{
+                                    $pagina = $_GET["pagina"];
+                                }
+                                $empiezaPor = ($pagina-1) * $prodPorPagina;
+
+                                $sql= "SELECT * FROM productos ORDER BY nombre LIMIT $empiezaPor,$prodPorPagina";
                                 $result = mysqli_query($conn,$sql);
                                 //Guardamos en una variable $result en donde verifica la conexion y la consulta
                                 while($row = mysqli_fetch_assoc($result)){
@@ -109,6 +114,14 @@
                             ?>
                         </tbody>
                     </table>
+                    <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                    <?php
+                        for($pagina = 1; $pagina <= $numPags; $pagina++)
+                            echo '<li class="page-item"><a class="page-link" href="mostrar_productos.php?pagina='.$pagina.'">'.$pagina.'</a></li>';
+                    ?>
+                    </ul>
+                </nav>
             </div>
             
         

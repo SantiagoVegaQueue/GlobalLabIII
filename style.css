@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+#all-body{
+    background-color: #EAEAEA;
+}
 body, html{
     height: 100%;
     font-family: 'Raleway', sans-serif;
+    
 }
 
 /*a{
@@ -145,6 +149,15 @@ body, html{
     padding-top: 50px;
     height: 50%;
     
+}
+
+#img-about-us{
+    padding-bottom: 20px;
+    max-width: 50%;
+    
+}
+#div-img-about-us{
+    text-align: center;
 }
 /*textarea { 
     width: 200px; 

@@ -20,14 +20,14 @@
 	<!-- Hoja de estilo CSS -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body id="all-body">
 	<div class="bg">
 
 		<!-- Nav -->
 		<div class="container" style="margin-top: 3.5rem; max-width: 40rem;">
 		<nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
 				<div class="container">
-					<a class="navbar-brand" href="#">Cortex empresario</a>
+					<a class="navbar-brand" href="index.php">Cortex empresario</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 					</button>
@@ -43,9 +43,6 @@
 					</li>
 					<li class="nav-item">
 					<a class="nav-link" href="productos.php">Productos</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="contacto.php">Contacto</a>
 					</li>
 					<?php
 				
@@ -79,22 +76,28 @@
 		</div>
 
 		<div class="container mx-auto">
-			<h1 class="p-5" style="text-align: center;">Vendemos cajas</h1>
+			<h1 class="p-5" style="text-align: center;">Nuestros inicios</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 			 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
 			 dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+			 <div class="col" id="div-img-about-us">
+				<img src="img/forge3.jpg" class="img-fluid" id="img-about-us" alt="">
+			</div>
 			 <p>Nunc non dictum elit. Phasellus sit amet malesuada nisi. Pellentesque aliquet mattis iaculis. Nunc quam diam, pellentesque eu hendrerit nec,
 			 sollicitudin ac lorem. Vivamus felis sem, eleifend vitae leo ut, laoreet condimentum sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus.
 			 Aenean sed pretium urna, et finibus sem. Nunc eu tellus ante. Suspendisse potenti. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
 			 cubilia curae; In vitae sagittis leo. Praesent volutpat sagittis accumsan. Etiam at mi iaculis, pulvinar eros in, ullamcorper ante. Integer leo enim, finibus
 			 ac maximus id, commodo eget lacus. Suspendisse scelerisque ut lectus ut fringilla. Phasellus dignissim pretium dolor, sed lobortis arcu pellentesque sed.</p>
+			
+			 
 		</div>
-	</div>
-
-	<footer id="footer" class="py-5 bg-dark">
+		<footer id="footer" class="py-5">
 	<div class="container">
 		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
 	</div>
 	</footer>
+	</div>
+
+	
 </body>
 </html>

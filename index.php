@@ -23,7 +23,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body id="all-body">
 
 	<?php
 		if(!isset($_SESSION["usernormal"])){
@@ -71,9 +71,7 @@
 			<li class="nav-item">
 			<a class="nav-link" href="productos.php">Productos</a>
 			</li>
-			<li class="nav-item">
-			<a class="nav-link" href="contacto.php">Contacto</a>
-			</li>
+			
 
 			<?php
 				
@@ -122,14 +120,12 @@
 			</div>
 			
 		</div>
-		
-
+		<footer id="footer" class="py-5">
+			<div class="container">
+				<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
+			</div>
+			</footer>
 		</div>
 	</div>
-	<footer id="footer" class="py-5">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
-	</div>
-			</footer>
 </body>
 </html>
