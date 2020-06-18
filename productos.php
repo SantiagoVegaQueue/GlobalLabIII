@@ -22,33 +22,31 @@
 </head>
 <body>
 	<div class="bg">
-
 		<!-- Nav -->
 		<div class="container" style="margin-top: 3.5rem; max-width: 40rem;">
-		<nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
+			<nav id="navbar-style" class="navbar navbar-expand-lg navbar-light fixed-top">
 				<div class="container">
 					<a class="navbar-brand" href="#">Cortex empresario</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-					</button>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-					<a class="nav-link" href="index.php">Inicio
-					<span class="sr-only">(current)</span>
-					</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="sobreNosotros.php">Sobre nosotros</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="productos.php">Productos</a>
-					</li>
-					<li class="nav-item">
-					<a class="nav-link" href="contacto.php">Contacto</a>
-					</li>
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item active">
+								<a class="nav-link" href="index.php">Inicio
+								<span class="sr-only">(current)</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="sobreNosotros.php">Sobre nosotros</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="productos.php">Productos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="contacto.php">Contacto</a>
+							</li>
 					<?php
-				
 						if(isset($_SESSION["usernormal"]) || isset($_SESSION["useradmin"])){
 							echo '
 							<li class="nav-item">
@@ -71,14 +69,15 @@
 							</li>';
 						}
 					?>
-					</ul>
+						</ul>
 					</div>
 				</div>
 			</nav> 
 		</div>
-        <div class="container mx-auto">  
-            <div class="row">
-				<div class="col-md-12 mx-auto">
+<div class="album py-5">
+
+	<div class="container">  
+        <div class="row">
 					<?php
 					require("conexion.php");
 
@@ -109,18 +108,19 @@
 
 					while($row = mysqli_fetch_array($result)) {
 						$img = base64_encode($row["imagen"]);
-						echo "<div class='col-12'>";
-						echo '<h4>'.$row["nombre"].'</h4>';
-						echo '<img height="100px" src="data:image/jpg;base64,'.$img.'">';
-						echo '<p>$'.$row["precio"].'</p>';
-						echo '<p>'.$row["descripcion"].'</p>';
+						echo "<div class='col-md-4'>";
+						echo '	<div class="card mb-4" id="card">';
+						echo '		<h4 class="text-center">'.$row["nombre"].'</h4>';
+						echo '		<img height="100px"  class="img-fluid" src="data:image/jpg;base64,'.$img.'">';
+						echo '		<p class="text-center">$'.$row["precio"].'</p>';
+						echo '		<p class="text-center">'.$row["descripcion"].'</p>';
+						echo '	</div>';
 						echo "</div>";
 					}
 					?>
-				</div>
 				
-            </div>
-
+        </div>
+</div>
 				<nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
                     <?php
@@ -129,8 +129,9 @@
                     ?>
                     </ul>
                 </nav>
-        </div>  
+         
 	</div>
+        
 
 	<footer class="py-5 bg-dark">
 		<div class="container">

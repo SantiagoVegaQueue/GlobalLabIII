@@ -39,7 +39,7 @@ body, html{
 }
 
 #navbar-style{
-    background-color: #515052;
+    background-color: #1D3E61;
 }
 
 #navbar-style a{
@@ -71,13 +71,14 @@ body, html{
     left: 0;
     height: 100vh;
     z-index: 999;
-    background: #252422;
+    background: #1D3E61;
     
 }
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #252422;
+    background: #1D3E61;
     text-align: center;
+    color: white;
 }
 
 #sidebar ul.components {
@@ -103,6 +104,36 @@ body, html{
     position: absolute;
     top: 0;
     right: 0;
+}
+.album{
+    background-color: none;
+}
+#lista_links_sidebar{
+    color: white;
+}
+#lista_links_sidebar a{
+    color: white;
+}
+.card-body{
+    padding-top: 100px;
+}
+.table .thead-dark th {
+    color: #fff;
+    background-color: #1D3E61;
+    border-color: #1D3E61;
+}
+
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-color: black;
+}
+.tabla-users{
+    padding-top: 50px;
+}
+.navbar-search{
+    background-color: none;
+    position: left;
 }
 /*textarea { 
     width: 200px; 

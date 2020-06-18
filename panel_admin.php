@@ -25,9 +25,10 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <img src="https://img.icons8.com/color/96/000000/admin-settings-male.png"/>
+                <p class="text-center"><?php echo $_SESSION["useradmin"];?></p>
             </div>
         
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled components" id="lista_links_sidebar">
             <p>Panel</p>
             <li>
                 <a href="usuarios_registrados.php">Usuarios registrados</a>
@@ -50,35 +51,34 @@
 
         <!-- Content -->
         <div class="container">
-            <div id="app" class="row">
-                <div id="content" class="col-12">
-                    
-                    <form action="subir_productos.php" id="formUpload" method="POST" enctype="multipart/form-data" class="card-body">
-                        <div class="form-group col-6">
-                            <label for="">Nombre del producto:</label>
-                            <input type="text" class="form-control" name="nombre" id="nombre"><br>
-                        </div>
+            <div class="form-row">
+                
+                <form action="subir_productos.php" id="formUpload" method="POST" enctype="multipart/form-data" class="card-body">
+                <h2 class="text-center">Suba de productos</h2>
+                    <div class="form-group col">
+                        <label for="">Nombre del producto:</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre"><br>
+                    </div>
 
-                        <div class="form-group col-6">
-                            <label for="">Precio:</label>
-                            <input type="text" class="form-control" id="precio" name="precio">
-                        </div>
+                    <div class="form-group col-4">
+                        <label for="">Precio:</label>
+                        <input type="text" class="form-control" id="precio" name="precio">
+                    </div>
 
-                        <div class="form-group col-6">
-                            <input type="file" class="form-control-file" id="fotos" name="fotos"><br>
-                        </div>
+                    <div class="form-group col-6">
+                        <input type="file" class="form-control-file" id="fotos" name="fotos"><br>
+                    </div>
 
-                        <div class="form-group col-6">
-                            <br><label for="">Descripcion del producto</label><br>
-                            <textarea name="descripcion" class="form-control" id="descripcion" placeholder="Añade una breve descripción del producto"></textarea><br>
-                        </div>
-                        
-                        <div class="form-group col-6">
-                        <button type="submit" class="btn">Subir producto</button>
-                        </div>
-                    </form>        
-                </div>
-            </div>
+                    <div class="form-group col">
+                        <br><label for="">Descripcion del producto</label><br>
+                        <textarea name="descripcion" class="form-control" id="descripcion" placeholder="Añade una breve descripción del producto"></textarea><br>
+                    </div>
+                            
+                    <div class="form-group col">
+                        <button type="submit" class="btn btn-primary">Subir producto</button>
+                    </div>
+                </form> 
+            </div>    
         </div>
         <!-- END Content -->
     </div>

@@ -18,13 +18,13 @@
 </head>
 <body>
     <div class="wrapper">
-        <!-- Sidebar -->
-        <nav id="sidebar">
+    <nav id="sidebar">
             <div class="sidebar-header">
                 <img src="https://img.icons8.com/color/96/000000/admin-settings-male.png"/>
+                <p class="text-center"><?php echo $_SESSION["useradmin"];?></p>
             </div>
         
-        <ul class="list-unstyled components">
+        <ul class="list-unstyled components" id="lista_links_sidebar">
             <p>Panel</p>
             <li>
                 <a href="usuarios_registrados.php">Usuarios registrados</a>
@@ -48,10 +48,15 @@
         <!-- Content -->
         <div id="content">
             <div>
-                <h2>Usuarios registrados</h2>
+                <h2 class="text-center">Usuarios registrados</h2>
             </div>
-
-            <div>
+          <!--  <nav class="navbar-search">
+                <form class="form-inline" method="POST">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar" name="buscar">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+                </form>
+            </nav>-->
+            <div class="tabla-users">
                 <table class="table">
                     <thead class="thead-dark">
                         <tr>
@@ -67,6 +72,7 @@
                     <tbody>
                         <?php
                             require("conexion.php");
+                            
                             $userPorPagina = 3;
                             
                             $sql = "SELECT * FROM usuarios";
@@ -85,10 +91,12 @@
                             
                             $sql= "SELECT * FROM usuarios ORDER BY id LIMIT $empiezaPor,$userPorPagina";
                             $result= mysqli_query($conn,$sql);
+                            
                             //Realizamos la consulta sql
                             //Seleccionamos todos los elementos de la tabla productos
                             //Guardamos en una variable $result en donde verifica la conexion y la consulta
                             while($row = mysqli_fetch_array($result)){
+                                
                             //Mostramos en un while con una variable $row, en donde el procedimiento mysqli_fectch_asscoc($result)
                             //almacena la variable $result
                             //Cerramos esta linea de php y mostramos los datos en la tabla

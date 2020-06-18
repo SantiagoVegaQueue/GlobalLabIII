@@ -19,11 +19,50 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <table class="table table-bordered">
-                        <thead>
+
+    <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="https://img.icons8.com/color/96/000000/admin-settings-male.png"/>
+                <p class="text-center"><?php echo $_SESSION["useradmin"];?></p>
+            </div>
+        
+        <ul class="list-unstyled components" id="lista_links_sidebar">
+            <p>Panel</p>
+            <li>
+                <a href="usuarios_registrados.php">Usuarios registrados</a>
+            </li>
+            <li>
+                <a href="panel_admin.php">Subir productos</a>
+            </li>
+            <li>
+                <a href="mostrar_productos.php">Ver productos subidos</a>
+            </li>
+            <li>
+                <a href="index.php">Pagina de inicio</a>
+            </li>
+            <li>
+                <a href="logout.php">Salir</a>
+            </li>
+        </ul>
+        </nav>
+        <!-- END Sidebar -->
+
+
+
+    <div id="content">
+            <div class="header-buscar">
+                <h2 class="text-center">Productos subidos</h2>
+            </div>
+            <nav class="navbar-search">
+                <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                <button class="btn btn-primary" type="submit">Buscar</button>
+                </form>
+            </nav>
+        
+            <div class="tabla-users">
+                <table class="table">
+                        <thead class="thead-dark">
                             <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Nombre</th>
@@ -62,8 +101,7 @@
                                 para que el php pueda mostrarlo-->
                                 <td><img height="50px" src="data:image/jpg;base64,<?php echo base64_encode($row['imagen']); ?>"></td>
                                 <td>
-                                    <a href="#" class="link_operacion">Modificar</a>
-                                    <a href="#" class="link_operacion">Eliminar</a>
+                                <a href="eliminar_productos.php?id=<?php echo $row["id"];?>">Eliminar</a>
                                 </td>
                             </tr>
                             <?php
@@ -73,7 +111,7 @@
                     </table>
             </div>
             
-        </div>
+        
     </div>
 </body>
 </html>
