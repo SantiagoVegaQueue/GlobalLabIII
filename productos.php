@@ -78,165 +78,81 @@
 		</div>
         <div class="container mx-auto">  
             <div class="row">
-                <div class="col-md-6 mx-auto">
+                <div class="col-md-8 mx-auto">
                     <div class="text-center">
                         <br><br><br><h1>Lista de productos</h1>
                     </div>
                 </div>
+
+				<div class="col-md-8 mx-auto">
+					<?php
+					$con = mysqli_connect('localhost','root','');
+					mysqli_select_db($con, 'tienda');
+
+					// define how many results you want per page
+					$results_per_page = 10;
+						
+					// find out the number of results stored in database
+					$sql='SELECT * FROM productos';
+					$resultado = mysqli_query($con, $sql);
+					$numeroResultados = mysqli_num_rows($resultado);
+
+					// determine number of total pages available
+					$number_of_pages = ceil($numeroResultados/$results_per_page);
+
+					// determine which page number visitor is currently on
+					if (!isset($_GET['page'])) {
+					$page = 1;
+					} else {
+					$page = $_GET['page'];
+					}
+
+					// determine the sql LIMIT starting number for the results on the displaying page
+					$this_page_first_result = ($page-1)*$results_per_page;
+
+					// retrieve selected results from database and display them on page
+					$sql='SELECT * FROM productos LIMIT ' . $this_page_first_result . ',' .  $results_per_page;
+					$resultado = mysqli_query($con, $sql);
+
+					while($row = mysqli_fetch_array($resultado)) {
+						echo $row['id'] . ' ' . $row['nombre']. '<br>';
+						
+
+						echo '<!-- <div class="card h-100">
+							<a img="' . $row['imagen'] . '"><img class="card-img-top"></a>
+							<div class="card-body">
+							<h4 class="card-title">
+								<a href="#">Caja naranja</a>
+							</h4>
+							<h5>$24.99</h5>
+							<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+						</div> -->';
+					}
+
+					// display the links to the pages
+					for ($page=1;$page<=$number_of_pages;$page++) {
+						echo '<a href="productos.php?page=' . $page . '">' . $page . '</a> ';
+					}
+
+					?>
+				</div>
             </div>
- 
-            <div class="col-md-6 mx-auto" style="width: 182px;">
-                <nav aria-label="NavPaginacion">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link bg-primary" href="#" >Previous</a></li>
-                        <li class="page-item"><a class="page-link bg-primary" href="#">Next</a></li>
-                    </ul>
-                </nav>
-            </div>
+
+			<div class="col-md-8 mx-auto" style="width: 182px;">
+				<nav aria-label="NavPaginacion">
+					<ul class="pagination">
+						<li class="page-item"><a class="page-link bg-primary" href="#" >Previous</a></li>
+						<li class="page-item"><a class="page-link bg-primary" href="#">Next</a></li>
+					</ul>
+				</nav>
+			</div>
         </div>  
-
-		<!--
-			<div class="row">
-				<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card h-100">
-					<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/41NzQ-f-0dL._AC_SY400_.jpg" alt=""></a>
-					<div class="card-body">
-					<h4 class="card-title">
-						<a href="#">Caja naranja</a>
-					</h4>
-					<h5>$24.99</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-					</div>
-					<div class="card-footer">
-					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-					</div>
-				</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card h-100">
-					<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/810oMCXKSSL._AC_SX355_.jpg" alt=""></a>
-					<div class="card-body">
-					<h4 class="card-title">
-						<a href="#">Caja gris</a>
-					</h4>
-					<h5>$24.99</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-					</div>
-					<div class="card-footer">
-					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-					</div>
-				</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card h-100">
-					<a href="#"><img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81YOmcf8RVL._AC_SX355_.jpg" alt=""></a>
-					<div class="card-body">
-					<h4 class="card-title">
-						<a href="#">Caja marron</a>
-					</h4>
-					<h5>$24.99</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-					</div>
-					<div class="card-footer">
-					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-					</div>
-				</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card h-100">
-					<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/1/14/C-vRQ5BUQAAJ79K.jpg/revision/latest/top-crop/width/300/height/300?cb=20170717122834" alt=""></a>
-					<div class="card-body">
-					<h4 class="card-title">
-						<a href="#">Caja edicion especial</a>
-					</h4>
-					<h5>$2499.99</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-					</div>
-					<div class="card-footer">
-					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-					</div>
-				</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card h-100">
-					<a href="#"><img class="card-img-top" src="https://vignette.wikia.nocookie.net/metalgear/images/7/7c/THEBOX.jpg/revision/latest?cb=20050831142709" alt=""></a>
-					<div class="card-body">
-					<h4 class="card-title">
-						<a href="#">!</a>
-					</h4>
-					<h5>$24.99</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-					</div>
-					<div class="card-footer">
-					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-					</div>
-				</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-				<div class="card h-100">
-					<a href="#"><img class="card-img-top" src="https://cdn3.dualshockers.com/wp-content/uploads/2015/08/MGS5Boss-8.jpg" alt=""></a>
-					<div class="card-body">
-					<h4 class="card-title">
-						<a href="#">Caja rosada</a>
-					</h4>
-					<h5>$24.99</h5>
-					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-					</div>
-					<div class="card-footer">
-					<small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-					</div>
-				</div>
-				</div>
-			</div>
-		</div>
-		-->
-		
-		<!--
-		<div class="container">
-			<div id="app" class="row">
-				<div class="col-md-4 pt-5">
-					<div class="card">
-						<div class="card-header">
-							<h4>Añada un producto</h4>
-						</div>
-
-						<form id="productoFormulario" class="card-body">
-							<div class="form-group">
-								<input type="text" id="name" placeholder="Nombre del producto" class="form-control">
-							</div>
-
-							<div class="form-group">
-								<input type="number" id="price" step="0.01" placeholder="Precio del producto" class="form-control">
-							</div>
-
-							<div class="form-group">
-								<input type="number" id="year" placeholder="Año del producto" class="form-control">
-							</div>
-
-							<input type="submit" value="Enviar" class="btn btn-primary btn-block">
-						</form>
-					</div>
-				</div>
-
-				<div class="col-md-8">
-					<div id="lista-productos">
-
-					</div>
-				</div>
-			</div>
-		</div>
-		-->
 	</div>
 
 	<footer class="py-5 bg-dark">
-	<div class="container">
-		<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
-	</div>
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy; Cortex Empresario 2020</p>
+		</div>
     </footer>
 
 </body>
